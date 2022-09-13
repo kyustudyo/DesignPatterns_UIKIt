@@ -9,57 +9,97 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let tableView = UITableView()
+    let orderTableView = UITableView()
+    let PhoneNumberTableView = UITableView()
     
     var dataManager = DataManager.shared
-    var sampleModel:SampleModel = SampleModel(name: "first", age: 333)
+    var infoModel:InfoModel = InfoModel(name: "first", age: 1)
+    
+    var event: Event? {
+        didSet {
+            if isViewLoaded {
+                PhoneNumberTableView.reloadData()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.cellID)
-        dataManager.delegate = self// 질문
+        view.backgroundColor = .systemGray6
+        orderTableView.delegate = self
+        orderTableView.dataSource = self
+        
+        PhoneNumberTableView.delegate = self
+        PhoneNumberTableView.dataSource = self
+        
+        orderTableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.cellID)
+        PhoneNumberTableView.register(TableViewCell2.self, forCellReuseIdentifier: TableViewCell2.cellID)
+//        dataManager.delegate = self // 질문
         
         // 1. completion handler로 모델에서 Controller로.
         // 2. 여기서는 KVO가 궂이 필요없다. property의 변화를 보고싶다면 필요하다.
-        dataManager.fetchData { model in
-            let observer = self.sampleModel.observe(\.name, options: [.old, .new]) { (object, change) in
-                print("\(change.oldValue) -> \(change.newValue)")
-                self.tableView.reloadData()
-            }
-            
-            // model 이름이 바뀌었다면 tableview reload.
-            self.sampleModel.name = model.name
-            observer.invalidate()
-            
-        }
+       fetchData()
         
         //MARK: TableView
-        view.addSubview(tableView)
-        tableView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+        view.addSubview(orderTableView)
+        view.addSubview(PhoneNumberTableView)
+        orderTableView.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 40, paddingLeft: 0, paddingRight: 0, height: 200)
+        PhoneNumberTableView.anchor(top: orderTableView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 100, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
         
     }
-}
-extension ViewController: fetchDelegate {
-    func fetchSampleModel(_ sampleModel: SampleModel) {
-//        print("from: delegate", sampleModel.name)
-        self.tableView.reloadData()
+    //MARK: User Interact -> Model Update -> View Update
+    private func fetchData() {
+        dataManager.fetchData { model in
+            let observer = self.infoModel.observe(\.age, options: [.old, .new]) { (object, change) in
+                print("\(change.oldValue) -> \(change.newValue)")
+                self.orderTableView.reloadData()
+            }
+            self.infoModel.age = model.age
+            observer.invalidate()
+        }
     }
 }
+//extension ViewController: fetchDelegate {
+//    func fetchSampleModel(_ sampleModel: InfoModel) {
+////        print("from: delegate", sampleModel.name)
+////        self.orderTableView.reloadData()
+//    }
+//}
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        switch tableView {
+        case orderTableView:
+            return 1
+        case PhoneNumberTableView:
+            return event?.phoneNumbers.count ?? 0
+        default:
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.cellID, for: indexPath) as? TableViewCell else { return UITableViewCell() }
-        cell.nameLabel.text = sampleModel.name
-        return cell
+        switch tableView {
+        case orderTableView:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.cellID, for: indexPath) as? TableViewCell else { return UITableViewCell() }
+            cell.nameLabel.text = "\(infoModel.age)"
+            return cell
+        case PhoneNumberTableView:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell2.cellID, for: indexPath) as? TableViewCell2 else { return UITableViewCell() }
+            cell.nameLabel.text = event?.phoneNumbers[indexPath.row].phoneNumber
+            return cell
+        default:
+            return UITableViewCell()
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("\(indexPath.row)")
+        switch tableView {
+        case orderTableView:
+            fetchData()
+        default:
+            return
+        }
     }
 }
 

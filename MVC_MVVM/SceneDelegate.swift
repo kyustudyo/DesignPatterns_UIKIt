@@ -19,7 +19,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        guard let _ = (scene as? UIWindowScene) else { return }
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        window?.rootViewController = ViewController()
+        let viewController = ViewController()
+        
+        Webservices.loadData { event in
+            viewController.event = event
+        }
+        
+        window?.rootViewController = viewController
+        
         window?.makeKeyAndVisible()
     }
 

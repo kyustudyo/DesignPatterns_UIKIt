@@ -6,23 +6,24 @@
 //
 
 import Foundation
-//MARK: KVO - 객체의 프로퍼티의 변경사항을 다른 객체에 알리기 위해 사용하는 코코아 프로그래밍 패턴
-
-protocol fetchDelegate: AnyObject {
-    func fetchSampleModel(_ sampleModel: SampleModel)
-}
+//
+//protocol fetchDelegate: AnyObject {
+//    func fetchSampleModel(_ sampleModel: InfoModel)
+//}
 
 class DataManager {
     
     static let shared = DataManager()
     
-    weak var delegate: fetchDelegate?
+    //MARK: delegate를 통한 데이터 전달 가능
+//    weak var delegate: fetchDelegate?
     
-    func fetchData(completion: @escaping (SampleModel) -> Void) {
+    //MARK: completion handler를 통한 데이터 전달 가능
+    func fetchData(completion: @escaping (InfoModel) -> Void) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2 ) {
-            let sample = SampleModel(name: "second", age: 6)
-            completion(sample)
-            self.delegate?.fetchSampleModel(sample)
+            let infoModel = InfoModel(name: "second", age: [1,2,3,4,5,6,7,8,9].randomElement()!)
+            completion(infoModel)
+//            self.delegate?.fetchSampleModel(sample)
         }
     }
     
