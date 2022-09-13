@@ -2,6 +2,7 @@
 
 ## MVC
 MVC에서 Model 과 View를 분리하여 관리하면 앱의 큰 수정이 있을때 용이합니다. (앱의 미래의 확장 가능성 증진!)
+### Model, View, Controller
 1. "The Model" is where your data resides. Things like persistence, model objects, parsers, managers, and networking code live there.
 2. "the controller entity" won’t know the concrete view it’s dealing with. Instead, it will communicate with an abstraction via a protocol. A classic example is the way a UITableView communicates with its data source via the UITableViewDataSource protocol. You likely won’t do much testing in the controller layer as, for the most part, it’s meant to kick things off, trigger data loads, handle UI interactions, mediate between UI and model, etc.
 3. "View"는 business logic 을 가져서는 안된다. UI와 관련되지 않은 모든것을 제외시킨다. Model을 건드리지 않는다. Reusable하도록 ..!
