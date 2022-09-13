@@ -32,8 +32,8 @@ class ViewController: UIViewController {
         PhoneNumberTableView.delegate = self
         PhoneNumberTableView.dataSource = self
         
-        orderTableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.cellID)
-        PhoneNumberTableView.register(TableViewCell2.self, forCellReuseIdentifier: TableViewCell2.cellID)
+        orderTableView.register(OrderTableViewCell.self, forCellReuseIdentifier: OrderTableViewCell.cellID)
+        PhoneNumberTableView.register(PhoneNumberTableViewCell.self, forCellReuseIdentifier: PhoneNumberTableViewCell.cellID)
 //        dataManager.delegate = self // 질문
         
         // 1. completion handler로 모델에서 Controller로.
@@ -80,11 +80,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch tableView {
         case orderTableView:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.cellID, for: indexPath) as? TableViewCell else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: OrderTableViewCell.cellID, for: indexPath) as? OrderTableViewCell else { return UITableViewCell() }
             cell.nameLabel.text = "\(infoModel.age)"
             return cell
         case PhoneNumberTableView:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell2.cellID, for: indexPath) as? TableViewCell2 else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: PhoneNumberTableViewCell.cellID, for: indexPath) as? PhoneNumberTableViewCell else { return UITableViewCell() }
             cell.nameLabel.text = event?.phoneNumbers[indexPath.row].phoneNumber
             return cell
         default:

@@ -7,9 +7,9 @@
 
 import UIKit
 
-class TableViewCell2: UITableViewCell {
+class OrderTableViewCell: UITableViewCell {
     
-    static let cellID = "TableViewCellID2"
+    static let cellID = "TableViewCellID"
     
     let nameLabel = UILabel()
     let ageLabel = UILabel()
