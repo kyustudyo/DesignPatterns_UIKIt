@@ -13,7 +13,18 @@ class ViewController: UIViewController {
     let PhoneNumberTableView = UITableView()
     
     var dataManager = DataManager.shared
-    var infoModel:InfoModel = InfoModel(name: "first", age: 1)
+    
+    var _infoModel:InfoModel = .dummyData {
+        didSet {
+                let observer = self.infoModel.observe(\.age, options: [.old, .new]) { (object, change) in
+                    self.orderTableView.reloadData()
+                }
+                self.infoModel.age = _infoModel.age
+                observer.invalidate()
+        }
+    }
+    
+    var infoModel: InfoModel = .dummyData
     
     var event: Event? {
         didSet {
@@ -50,12 +61,13 @@ class ViewController: UIViewController {
     //MARK: User Interact -> Model Update -> View Update
     private func fetchData() {
         dataManager.fetchData { model in
-            let observer = self.infoModel.observe(\.age, options: [.old, .new]) { (object, change) in
-                print("\(change.oldValue) -> \(change.newValue)")
-                self.orderTableView.reloadData()
-            }
-            self.infoModel.age = model.age
-            observer.invalidate()
+//            let observer = self.infoModel.observe(\.age, options: [.old, .new]) { (object, change) in
+//                print("\(change.oldValue) -> \(change.newValue)")
+//                self.orderTableView.reloadData()
+//            }
+//            self.infoModel.age = model.age
+            self._infoModel = model
+//            observer.invalidate()
         }
     }
 }
