@@ -61,22 +61,11 @@ class ViewController: UIViewController {
     //MARK: User Interact -> Model Update -> View Update
     private func fetchData() {
         dataManager.fetchData { model in
-//            let observer = self.infoModel.observe(\.age, options: [.old, .new]) { (object, change) in
-//                print("\(change.oldValue) -> \(change.newValue)")
-//                self.orderTableView.reloadData()
-//            }
-//            self.infoModel.age = model.age
             self._infoModel = model
-//            observer.invalidate()
         }
     }
 }
-//extension ViewController: fetchDelegate {
-//    func fetchSampleModel(_ sampleModel: InfoModel) {
-////        print("from: delegate", sampleModel.name)
-////        self.orderTableView.reloadData()
-//    }
-//}
+
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch tableView {
