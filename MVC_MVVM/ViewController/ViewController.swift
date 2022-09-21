@@ -60,8 +60,9 @@ class ViewController: UIViewController {
         //MARK: TableView
         view.addSubview(orderTableView)
         view.addSubview(PhoneNumberTableView)
-        orderTableView.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 40, paddingLeft: 0, paddingRight: 0, height: 200)
-        PhoneNumberTableView.anchor(top: orderTableView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 100, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+        orderTableView.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingRight: 0, height: 200)
+        
+        PhoneNumberTableView.anchor(top: orderTableView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
         
     }
     private func bind() {

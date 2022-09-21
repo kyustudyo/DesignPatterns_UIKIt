@@ -14,6 +14,14 @@
 		798A67C728D09F0A0018F9B8 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A67C628D09F0A0018F9B8 /* Event.swift */; };
 		798A67C928D09F420018F9B8 /* PhoneNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A67C828D09F420018F9B8 /* PhoneNumbers.swift */; };
 		798A67CB28D0A3180018F9B8 /* PhoneNumberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A67CA28D0A3180018F9B8 /* PhoneNumberTableViewCell.swift */; };
+		79B3E9D328DB17F9007F0672 /* MVVM_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3E9D228DB17F9007F0672 /* MVVM_ViewController.swift */; };
+		79B3E9DB28DB18D0007F0672 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3E9DA28DB18D0007F0672 /* APIService.swift */; };
+		79B3E9DD28DB1907007F0672 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3E9DC28DB1907007F0672 /* Product.swift */; };
+		79B3E9DF28DB193A007F0672 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3E9DE28DB193A007F0672 /* ProductViewModel.swift */; };
+		79B3E9E128DB197A007F0672 /* ProductTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3E9E028DB197A007F0672 /* ProductTableViewDataSource.swift */; };
+		79B3E9E328DB1997007F0672 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3E9E228DB1997007F0672 /* ProductTableViewCell.swift */; };
+		79B3E9E728DB1C89007F0672 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3E9E628DB1C89007F0672 /* Extension.swift */; };
+		79B3E9EA28DB1D95007F0672 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 79B3E9E928DB1D95007F0672 /* SnapKit */; };
 		79EDC45B28BBAB6C0061524A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EDC45A28BBAB6C0061524A /* AppDelegate.swift */; };
 		79EDC45D28BBAB6C0061524A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EDC45C28BBAB6C0061524A /* SceneDelegate.swift */; };
 		79EDC45F28BBAB6C0061524A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EDC45E28BBAB6C0061524A /* ViewController.swift */; };
@@ -34,6 +42,13 @@
 		798A67C628D09F0A0018F9B8 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		798A67C828D09F420018F9B8 /* PhoneNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumbers.swift; sourceTree = "<group>"; };
 		798A67CA28D0A3180018F9B8 /* PhoneNumberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTableViewCell.swift; sourceTree = "<group>"; };
+		79B3E9D228DB17F9007F0672 /* MVVM_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_ViewController.swift; sourceTree = "<group>"; };
+		79B3E9DA28DB18D0007F0672 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		79B3E9DC28DB1907007F0672 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		79B3E9DE28DB193A007F0672 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		79B3E9E028DB197A007F0672 /* ProductTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewDataSource.swift; sourceTree = "<group>"; };
+		79B3E9E228DB1997007F0672 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		79B3E9E628DB1C89007F0672 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		79EDC45728BBAB6C0061524A /* MVC_MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVC_MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79EDC45A28BBAB6C0061524A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79EDC45C28BBAB6C0061524A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79B3E9EA28DB1D95007F0672 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,9 +91,72 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		79B3E9D128DB17E7007F0672 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				79B3E9D928DB18C2007F0672 /* WebService */,
+				79B3E9D828DB185A007F0672 /* MVVM_Model */,
+				79B3E9D728DB180A007F0672 /* MVVM_View */,
+				79B3E9D528DB1805007F0672 /* MVVM_ViewModel */,
+				79B3E9D428DB17FF007F0672 /* MVVM_ViewController */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		79B3E9D428DB17FF007F0672 /* MVVM_ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				79B3E9D228DB17F9007F0672 /* MVVM_ViewController.swift */,
+			);
+			path = MVVM_ViewController;
+			sourceTree = "<group>";
+		};
+		79B3E9D528DB1805007F0672 /* MVVM_ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				79B3E9DE28DB193A007F0672 /* ProductViewModel.swift */,
+				79B3E9E028DB197A007F0672 /* ProductTableViewDataSource.swift */,
+			);
+			path = MVVM_ViewModel;
+			sourceTree = "<group>";
+		};
+		79B3E9D728DB180A007F0672 /* MVVM_View */ = {
+			isa = PBXGroup;
+			children = (
+				79B3E9E228DB1997007F0672 /* ProductTableViewCell.swift */,
+			);
+			path = MVVM_View;
+			sourceTree = "<group>";
+		};
+		79B3E9D828DB185A007F0672 /* MVVM_Model */ = {
+			isa = PBXGroup;
+			children = (
+				79B3E9DC28DB1907007F0672 /* Product.swift */,
+			);
+			path = MVVM_Model;
+			sourceTree = "<group>";
+		};
+		79B3E9D928DB18C2007F0672 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				79B3E9DA28DB18D0007F0672 /* APIService.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		79B3E9E528DB1C7E007F0672 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				79B3E9E628DB1C89007F0672 /* Extension.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		79EDC44E28BBAB6C0061524A = {
 			isa = PBXGroup;
 			children = (
+				79B3E9E528DB1C7E007F0672 /* Helper */,
+				79B3E9D128DB17E7007F0672 /* MVVM */,
 				79EDC45928BBAB6C0061524A /* MVC_MVVM */,
 				79EDC45828BBAB6C0061524A /* Products */,
 			);
@@ -156,6 +235,9 @@
 			dependencies = (
 			);
 			name = MVC_MVVM;
+			packageProductDependencies = (
+				79B3E9E928DB1D95007F0672 /* SnapKit */,
+			);
 			productName = MVC_MVVM;
 			productReference = 79EDC45728BBAB6C0061524A /* MVC_MVVM.app */;
 			productType = "com.apple.product-type.application";
@@ -184,6 +266,9 @@
 				Base,
 			);
 			mainGroup = 79EDC44E28BBAB6C0061524A;
+			packageReferences = (
+				79B3E9E828DB1D95007F0672 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 79EDC45828BBAB6C0061524A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -213,17 +298,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				79EDC47428BBACCC0061524A /* DataManager.swift in Sources */,
+				79B3E9DB28DB18D0007F0672 /* APIService.swift in Sources */,
 				798A67C728D09F0A0018F9B8 /* Event.swift in Sources */,
+				79B3E9E328DB1997007F0672 /* ProductTableViewCell.swift in Sources */,
 				79EDC45F28BBAB6C0061524A /* ViewController.swift in Sources */,
 				79EDC46F28BBAC600061524A /* OrderTableViewCell.swift in Sources */,
 				79EDC47628BBAD150061524A /* InfoModel.swift in Sources */,
 				79EDC45B28BBAB6C0061524A /* AppDelegate.swift in Sources */,
 				798A67C328D054C90018F9B8 /* Network.swift in Sources */,
 				798A67C928D09F420018F9B8 /* PhoneNumbers.swift in Sources */,
+				79B3E9DD28DB1907007F0672 /* Product.swift in Sources */,
 				79EDC45D28BBAB6C0061524A /* SceneDelegate.swift in Sources */,
+				79B3E9DF28DB193A007F0672 /* ProductViewModel.swift in Sources */,
 				798A67C128D054940018F9B8 /* Webservices.swift in Sources */,
+				79B3E9D328DB17F9007F0672 /* MVVM_ViewController.swift in Sources */,
+				79B3E9E728DB1C89007F0672 /* Extension.swift in Sources */,
 				79EDC47828BBCC2C0061524A /* ViewExtension.swift in Sources */,
 				798A67CB28D0A3180018F9B8 /* PhoneNumberTableViewCell.swift in Sources */,
+				79B3E9E128DB197A007F0672 /* ProductTableViewDataSource.swift in Sources */,
 				798A67C528D054D00018F9B8 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +534,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		79B3E9E828DB1D95007F0672 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		79B3E9E928DB1D95007F0672 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 79B3E9E828DB1D95007F0672 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 79EDC44F28BBAB6C0061524A /* Project object */;
 }
