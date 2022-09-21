@@ -1,5 +1,6 @@
 # MVC, MVVM 두가지 디자인패턴 샘플 프로젝트입니다 ✏️
 
+
 # 소프트웨어의 개발 방법, software development pattern - MVC to MVVM
 ## MVC
 MVC에서 Model 과 View를 분리하여 관리하면 앱의 큰 수정이 있을때 용이합니다. (앱의 미래의 확장 가능성 증진!)
