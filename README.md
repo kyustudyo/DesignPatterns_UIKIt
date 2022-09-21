@@ -1,5 +1,5 @@
 # MVC, MVVM 두가지 디자인패턴 샘플 프로젝트입니다 ✏️
-1. 현재 'MVVM' 코드에서 데이터를 바인딩 할때 연습을 위해 Combine, Rx를 사용하지 않았습니다. -> 추후 바꿀 예정
+1. 현재 'MVVM' 폴더에서 데이터를 바인딩 할때 연습을 위해 Combine, Rx를 사용하지 않았습니다. -> 추후 바꿀 예정
 
 todo: https://github.com/BestKora/Combine-MVVM-UIKit, https://velog.io/@aurora_97/Combine-UIKit-MVVM-Combine-예제
 
