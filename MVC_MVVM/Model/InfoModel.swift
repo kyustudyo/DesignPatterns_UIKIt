@@ -16,4 +16,6 @@ import Foundation
         self.name = name
         self.age = age
     }
+    
+    static let dummyData = InfoModel(name: "이한규", age: 17)
 }

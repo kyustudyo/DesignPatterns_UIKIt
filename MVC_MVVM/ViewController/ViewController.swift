@@ -6,14 +6,38 @@
 //
 
 import UIKit
+import Combine
 
 class ViewController: UIViewController {
 
-    let orderTableView = UITableView()
-    let PhoneNumberTableView = UITableView()
+    private lazy var orderTableView: UITableView = {
+        $0.dataSource = self
+        $0.delegate = self
+        $0.register(OrderTableViewCell.self, forCellReuseIdentifier: OrderTableViewCell.cellID)
+        return $0
+    }(UITableView())
+    
+    private lazy var PhoneNumberTableView: UITableView = {
+        $0.dataSource = self
+        $0.delegate = self
+        $0.register(PhoneNumberTableViewCell.self, forCellReuseIdentifier: PhoneNumberTableViewCell.cellID)
+        return $0
+    }(UITableView())
+    
     
     var dataManager = DataManager.shared
-    var infoModel:InfoModel = InfoModel(name: "first", age: 1)
+    
+    var _infoModel:InfoModel = .dummyData {
+        didSet {
+                let observer = self.infoModel.observe(\.age, options: [.old, .new]) { (object, change) in
+                    self.orderTableView.reloadData()
+                }
+                self.infoModel.age = _infoModel.age
+                observer.invalidate()
+        }
+    }
+    
+    var infoModel: InfoModel = .dummyData
     
     var event: Event? {
         didSet {
@@ -23,18 +47,11 @@ class ViewController: UIViewController {
         }
     }
     
+    var eventPublisher = Event2()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemGray6
-        orderTableView.delegate = self
-        orderTableView.dataSource = self
-        
-        PhoneNumberTableView.delegate = self
-        PhoneNumberTableView.dataSource = self
-        
-        orderTableView.register(OrderTableViewCell.self, forCellReuseIdentifier: OrderTableViewCell.cellID)
-        PhoneNumberTableView.register(PhoneNumberTableViewCell.self, forCellReuseIdentifier: PhoneNumberTableViewCell.cellID)
-//        dataManager.delegate = self // 질문
         
         // 1. completion handler로 모델에서 Controller로.
         // 2. 여기서는 KVO가 궂이 필요없다. property의 변화를 보고싶다면 필요하다.
@@ -43,28 +60,24 @@ class ViewController: UIViewController {
         //MARK: TableView
         view.addSubview(orderTableView)
         view.addSubview(PhoneNumberTableView)
-        orderTableView.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 40, paddingLeft: 0, paddingRight: 0, height: 200)
-        PhoneNumberTableView.anchor(top: orderTableView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 100, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+        orderTableView.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingRight: 0, height: 200)
         
+        PhoneNumberTableView.anchor(top: orderTableView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+        
+    }
+    private func bind() {
+        _ = eventPublisher.sink(receiveValue: {
+            print($0)
+        })
     }
     //MARK: User Interact -> Model Update -> View Update
     private func fetchData() {
         dataManager.fetchData { model in
-            let observer = self.infoModel.observe(\.age, options: [.old, .new]) { (object, change) in
-                print("\(change.oldValue) -> \(change.newValue)")
-                self.orderTableView.reloadData()
-            }
-            self.infoModel.age = model.age
-            observer.invalidate()
+            self._infoModel = model
         }
     }
 }
-//extension ViewController: fetchDelegate {
-//    func fetchSampleModel(_ sampleModel: InfoModel) {
-////        print("from: delegate", sampleModel.name)
-////        self.orderTableView.reloadData()
-//    }
-//}
+
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch tableView {
