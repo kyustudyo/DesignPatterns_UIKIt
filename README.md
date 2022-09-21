@@ -1,6 +1,8 @@
 # MVC, MVVM 두가지 디자인패턴 샘플 프로젝트입니다 ✏️
 1. 현재 'MVVM' 코드에서 데이터를 바인딩 할때 연습을 위해 Combine, Rx를 사용하지 않았습니다. -> 추후 바꿀 예정
+
 todo: https://github.com/BestKora/Combine-MVVM-UIKit, https://velog.io/@aurora_97/Combine-UIKit-MVVM-Combine-예제
+
 # 소프트웨어의 개발 방법, software development pattern - MVC to MVVM
 ## MVC
 MVC에서 Model 과 View를 분리하여 관리하면 앱의 큰 수정이 있을때 용이합니다. (앱의 미래의 확장 가능성 증진!)
