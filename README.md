@@ -5,6 +5,7 @@ todo: https://github.com/BestKora/Combine-MVVM-UIKit, https://velog.io/@aurora_9
 ## MVC에서 KVO, NotificationCenter 같은 Observer Pattern을 사용했습니다. Delegate Pattern 또는 클로저를 이용한 completionHandler로 Model의 변화를 전달할 예정입니다.
 
 
+# 
 # 소프트웨어의 개발 방법, software development pattern - MVC to MVVM
 ## MVC
 MVC에서 Model 과 View를 분리하여 관리하면 앱의 큰 수정이 있을때 용이합니다. (앱의 미래의 확장 가능성 증진!)
@@ -21,9 +22,6 @@ MVC에서 Model 과 View를 분리하여 관리하면 앱의 큰 수정이 있�
 ## MVC -> MVVM
 MVC -> MVVM: Business logic을 포함하는 ViewModel을 만들어, MVC와는 다르게 ViewController를 거의 data와 view를 '나타내는' 역할만 한다.
 View 에서의 변화가 필요할 때나 Model에서의 변화가 필요할때 ViewModel을 통해 변한다.
-
-## TODO
-- 코드 주석 달기
 
 ### Reference: 
 - https://www.raywenderlich.com/1000705-model-view-controller-mvc-in-ios-a-modern-approach
