@@ -20,7 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
         
-        let viewController = ViewController()
+//        let viewController = ViewController()
+        let viewController = MVVM_ViewController_()
 //        let viewController = ProductViewController()
 
         

@@ -22,6 +22,14 @@
 		79B3E9E328DB1997007F0672 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3E9E228DB1997007F0672 /* ProductTableViewCell.swift */; };
 		79B3E9E728DB1C89007F0672 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3E9E628DB1C89007F0672 /* Extension.swift */; };
 		79B3E9EA28DB1D95007F0672 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 79B3E9E928DB1D95007F0672 /* SnapKit */; };
+		79B3E9EF28DBE527007F0672 /* MVC_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3E9EE28DBE527007F0672 /* MVC_ViewController.swift */; };
+		79B3E9F128DBE5C2007F0672 /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3E9F028DBE5C2007F0672 /* InputTextField.swift */; };
+		79B3E9F328DBE662007F0672 /* LimitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3E9F228DBE662007F0672 /* LimitTextField.swift */; };
+		79B3E9F528DBE68F007F0672 /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3E9F428DBE68F007F0672 /* PaddedTextField.swift */; };
+		79B3E9F728DBEB78007F0672 /* ProductStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3E9F628DBEB78007F0672 /* ProductStackView.swift */; };
+		79B3E9FC28DC03FA007F0672 /* MVVM_ViewController_.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3E9FB28DC03FA007F0672 /* MVVM_ViewController_.swift */; };
+		79B3E9FF28DC0439007F0672 /* MVVM_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3E9FE28DC0439007F0672 /* MVVM_ViewModel.swift */; };
+		79B3EA0228DC4EC9007F0672 /* UIControl_UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3EA0128DC4EC9007F0672 /* UIControl_UITextField.swift */; };
 		79EDC45B28BBAB6C0061524A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EDC45A28BBAB6C0061524A /* AppDelegate.swift */; };
 		79EDC45D28BBAB6C0061524A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EDC45C28BBAB6C0061524A /* SceneDelegate.swift */; };
 		79EDC45F28BBAB6C0061524A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EDC45E28BBAB6C0061524A /* ViewController.swift */; };
@@ -49,6 +57,14 @@
 		79B3E9E028DB197A007F0672 /* ProductTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewDataSource.swift; sourceTree = "<group>"; };
 		79B3E9E228DB1997007F0672 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		79B3E9E628DB1C89007F0672 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		79B3E9EE28DBE527007F0672 /* MVC_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVC_ViewController.swift; sourceTree = "<group>"; };
+		79B3E9F028DBE5C2007F0672 /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
+		79B3E9F228DBE662007F0672 /* LimitTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitTextField.swift; sourceTree = "<group>"; };
+		79B3E9F428DBE68F007F0672 /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
+		79B3E9F628DBEB78007F0672 /* ProductStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductStackView.swift; sourceTree = "<group>"; };
+		79B3E9FB28DC03FA007F0672 /* MVVM_ViewController_.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_ViewController_.swift; sourceTree = "<group>"; };
+		79B3E9FE28DC0439007F0672 /* MVVM_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_ViewModel.swift; sourceTree = "<group>"; };
+		79B3EA0128DC4EC9007F0672 /* UIControl_UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControl_UITextField.swift; sourceTree = "<group>"; };
 		79EDC45728BBAB6C0061524A /* MVC_MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVC_MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79EDC45A28BBAB6C0061524A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79EDC45C28BBAB6C0061524A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,9 +168,73 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		79B3E9EC28DBE50F007F0672 /* MVC_MVVM_Compare */ = {
+			isa = PBXGroup;
+			children = (
+				79B3E9FA28DC03DF007F0672 /* MVVM_Example */,
+				79B3E9F928DC03DA007F0672 /* MVC_Example */,
+			);
+			path = MVC_MVVM_Compare;
+			sourceTree = "<group>";
+		};
+		79B3E9ED28DBE513007F0672 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				79B3E9EE28DBE527007F0672 /* MVC_ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		79B3E9F828DC0399007F0672 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				79B3E9F028DBE5C2007F0672 /* InputTextField.swift */,
+				79B3E9F228DBE662007F0672 /* LimitTextField.swift */,
+				79B3E9F428DBE68F007F0672 /* PaddedTextField.swift */,
+				79B3E9F628DBEB78007F0672 /* ProductStackView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		79B3E9F928DC03DA007F0672 /* MVC_Example */ = {
+			isa = PBXGroup;
+			children = (
+				79B3E9F828DC0399007F0672 /* View */,
+				79B3E9ED28DBE513007F0672 /* ViewController */,
+			);
+			path = MVC_Example;
+			sourceTree = "<group>";
+		};
+		79B3E9FA28DC03DF007F0672 /* MVVM_Example */ = {
+			isa = PBXGroup;
+			children = (
+				79B3EA0028DC4EB6007F0672 /* Extension */,
+				79B3E9FD28DC042A007F0672 /* ViewModel */,
+				79B3E9FB28DC03FA007F0672 /* MVVM_ViewController_.swift */,
+			);
+			path = MVVM_Example;
+			sourceTree = "<group>";
+		};
+		79B3E9FD28DC042A007F0672 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				79B3E9FE28DC0439007F0672 /* MVVM_ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		79B3EA0028DC4EB6007F0672 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				79B3EA0128DC4EC9007F0672 /* UIControl_UITextField.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		79EDC44E28BBAB6C0061524A = {
 			isa = PBXGroup;
 			children = (
+				79B3E9EC28DBE50F007F0672 /* MVC_MVVM_Compare */,
 				79B3E9E528DB1C7E007F0672 /* Helper */,
 				79B3E9D128DB17E7007F0672 /* MVVM */,
 				79EDC45928BBAB6C0061524A /* MVC_MVVM */,
@@ -297,22 +377,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79B3E9FF28DC0439007F0672 /* MVVM_ViewModel.swift in Sources */,
 				79EDC47428BBACCC0061524A /* DataManager.swift in Sources */,
 				79B3E9DB28DB18D0007F0672 /* APIService.swift in Sources */,
+				79B3E9FC28DC03FA007F0672 /* MVVM_ViewController_.swift in Sources */,
 				798A67C728D09F0A0018F9B8 /* Event.swift in Sources */,
 				79B3E9E328DB1997007F0672 /* ProductTableViewCell.swift in Sources */,
 				79EDC45F28BBAB6C0061524A /* ViewController.swift in Sources */,
 				79EDC46F28BBAC600061524A /* OrderTableViewCell.swift in Sources */,
 				79EDC47628BBAD150061524A /* InfoModel.swift in Sources */,
 				79EDC45B28BBAB6C0061524A /* AppDelegate.swift in Sources */,
+				79B3E9EF28DBE527007F0672 /* MVC_ViewController.swift in Sources */,
+				79B3E9F328DBE662007F0672 /* LimitTextField.swift in Sources */,
 				798A67C328D054C90018F9B8 /* Network.swift in Sources */,
 				798A67C928D09F420018F9B8 /* PhoneNumbers.swift in Sources */,
 				79B3E9DD28DB1907007F0672 /* Product.swift in Sources */,
+				79B3EA0228DC4EC9007F0672 /* UIControl_UITextField.swift in Sources */,
 				79EDC45D28BBAB6C0061524A /* SceneDelegate.swift in Sources */,
 				79B3E9DF28DB193A007F0672 /* ProductViewModel.swift in Sources */,
+				79B3E9F128DBE5C2007F0672 /* InputTextField.swift in Sources */,
 				798A67C128D054940018F9B8 /* Webservices.swift in Sources */,
 				79B3E9D328DB17F9007F0672 /* MVVM_ViewController.swift in Sources */,
+				79B3E9F728DBEB78007F0672 /* ProductStackView.swift in Sources */,
 				79B3E9E728DB1C89007F0672 /* Extension.swift in Sources */,
+				79B3E9F528DBE68F007F0672 /* PaddedTextField.swift in Sources */,
 				79EDC47828BBCC2C0061524A /* ViewExtension.swift in Sources */,
 				798A67CB28D0A3180018F9B8 /* PhoneNumberTableViewCell.swift in Sources */,
 				79B3E9E128DB197A007F0672 /* ProductTableViewDataSource.swift in Sources */,
