@@ -1,8 +1,8 @@
 # MVC, MVVM 두가지 디자인패턴 - 샘플 프로젝트입니다 ✏️
 1. Combine, SnapKit
-
+2. MVC에서 KVO, NotificationCenter 같은 Observer Pattern을 사용했습니다. Delegate Pattern 또는 클로저를 이용한 completionHandler로 Model의 변화를 전달할 예정입니다.
 todo: https://github.com/BestKora/Combine-MVVM-UIKit, https://velog.io/@aurora_97/Combine-UIKit-MVVM-Combine-예제
-## MVC에서 KVO, NotificationCenter 같은 Observer Pattern을 사용했습니다. Delegate Pattern 또는 클로저를 이용한 completionHandler로 Model의 변화를 전달할 예정입니다.
+
 
 
 # 
