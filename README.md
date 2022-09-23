@@ -3,7 +3,7 @@
 2. DI
 
 MVC에서 KVO, NotificationCenter 같은 Observer Pattern을 사용했습니다. Delegate Pattern 또는 클로저를 이용한 completionHandler로 Model의 변화를 전달할 예정입니다.
-todo: https://github.com/BestKora/Combine-MVVM-UIKit, https://velog.io/@aurora_97/Combine-UIKit-MVVM-Combine-예제
+todo: https://github.com/BestKora/Combine-MVVM-UIKit
 
 
 
@@ -29,3 +29,4 @@ View 에서의 변화가 필요할 때나 Model에서의 변화가 필요할때 
 - https://www.raywenderlich.com/1000705-model-view-controller-mvc-in-ios-a-modern-approach
 - https://developer.apple.com/library/archive/documentation/General/Conceptual/CocoaEncyclopedia/Model-View-Controller/Model-View-Controller.html
 - https://velog.io/@ictechgy/MVC-%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4#%08%EB%82%98%EC%98%AC-%EC%88%98-%EC%9E%88%EB%8A%94-%EC%A7%88%EB%AC%B8%EB%93%A4
+- https://velog.io/@aurora_97/Combine-UIKit-MVVM-Combine-예제
