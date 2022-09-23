@@ -1,4 +1,4 @@
-# MVC, MVVM 두가지 디자인패턴 - 샘플 프로젝트입니다 ✏️
+# MVC, MVVM 두가지 디자인패턴 관련 다수 프로젝트 파일 ✏️
 1. Combine, SnapKit
 2. DI
 
