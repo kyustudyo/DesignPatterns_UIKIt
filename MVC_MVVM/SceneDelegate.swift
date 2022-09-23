@@ -21,8 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: scene)
         
 //        let viewController = ViewController()
-//        let viewController = MVVM_ViewController_()
-        let viewController = DI_ViewController()
+        let viewController = ProductViewController()
+//        let viewController = DI_ViewController()
 //        let  viewController = P_ViewController()
 //        let viewController = ProductViewController()
 

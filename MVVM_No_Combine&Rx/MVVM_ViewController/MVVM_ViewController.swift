@@ -10,9 +10,9 @@ import SnapKit
 
 public class ProductViewController: UIViewController {
     
-    
     private lazy var productTableView: UITableView = {
         $0.register(ProductTableViewCell.self, forCellReuseIdentifier: "productTableViewCell")
+        $0.delegate = self
         return $0
     }(UITableView())
     
@@ -28,9 +28,13 @@ public class ProductViewController: UIViewController {
     }
     
     private func setupUI() {
+        view.backgroundColor = .systemBackground
         view.addSubview(productTableView)
         productTableView.snp.makeConstraints { make in
-            make.edges.equalToSuperview().inset(8)
+            make.top.equalToSuperview().offset(12)
+            make.bottom.equalToSuperview()
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
         }
     }
     func callToViewModelForUIUpdate(){
@@ -44,9 +48,10 @@ public class ProductViewController: UIViewController {
     func updateDataSource(){
         
         self.dataSource = ProductTableViewDataSource(cellIdentifier: "productTableViewCell", items: self.productViewModel.product, configureCell: { (cell, evm) in
-            
             cell.productLabel.text = evm?.thumbnail
-            cell.productNameLabel.text = evm?.brand
+//            cell.productNameLabel.text = evm?.brand
+            cell.productNameLabel.text = "cell 클릭시 api 호출 합니다.\n 색깔의 변화는 완료를 의미합니다."
+            cell.backgroundColor = UIColor.allColors.randomElement()
         })
         DispatchQueue.main.async {
             self.productTableView.dataSource = self.dataSource
@@ -57,3 +62,8 @@ public class ProductViewController: UIViewController {
     
 }
 
+extension ProductViewController: UITableViewDelegate {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        productViewModel.didTapCell()
+    }
+}

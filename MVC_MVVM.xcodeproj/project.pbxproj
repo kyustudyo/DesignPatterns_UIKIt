@@ -242,7 +242,7 @@
 			path = MyAppUIKit;
 			sourceTree = "<group>";
 		};
-		79B3E9D128DB17E7007F0672 /* MVVM */ = {
+		79B3E9D128DB17E7007F0672 /* MVVM_No_Combine&Rx */ = {
 			isa = PBXGroup;
 			children = (
 				79B3E9D928DB18C2007F0672 /* WebService */,
@@ -251,7 +251,7 @@
 				79B3E9D528DB1805007F0672 /* MVVM_ViewModel */,
 				79B3E9D428DB17FF007F0672 /* MVVM_ViewController */,
 			);
-			path = MVVM;
+			path = "MVVM_No_Combine&Rx";
 			sourceTree = "<group>";
 		};
 		79B3E9D428DB17FF007F0672 /* MVVM_ViewController */ = {
@@ -372,7 +372,7 @@
 				7955C61A28DD8BFB007D62D1 /* DI */,
 				79B3E9EC28DBE50F007F0672 /* MVC_MVVM_Compare */,
 				79B3E9E528DB1C7E007F0672 /* Helper */,
-				79B3E9D128DB17E7007F0672 /* MVVM */,
+				79B3E9D128DB17E7007F0672 /* MVVM_No_Combine&Rx */,
 				79EDC45928BBAB6C0061524A /* MVC_MVVM */,
 				79AC056828DD765000790053 /* MyAppUIKit */,
 				79AC053D28DD730000790053 /* API */,

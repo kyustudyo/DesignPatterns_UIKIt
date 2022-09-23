@@ -18,6 +18,9 @@ class ProductTableViewCell: UITableViewCell {
     
     lazy var productNameLabel: UILabel = {
         let v = UILabel()
+        v.adjustsFontSizeToFitWidth = true
+        v.numberOfLines = 0
+        v.textAlignment = .center
         return v
     }()
     
