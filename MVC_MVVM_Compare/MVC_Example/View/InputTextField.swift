@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 public enum ProductInputFieldType {
-    case newCreate
+    case same
     case deco
 }
 
@@ -25,13 +25,25 @@ final class ProductInputTextField: UIView {
         return v
     }()
     
-    lazy var holderTextField = LimitTextField(frame: .zero, type: .holder)
-    lazy var productTextField = LimitTextField(frame: .zero, type: .account)
+    var holderTextField: LimitTextField = LimitTextField(frame: .zero, type: .holder)
+    var productTextField: LimitTextField = LimitTextField(frame: .zero, type: .account)
+    
     private var type: ProductInputFieldType
     
     init(frame: CGRect, type: ProductInputFieldType) {
         self.type = type
+        
+        switch type {
+        case .deco:
+            holderTextField = LimitTextField(frame: .zero, type: .holder)
+            productTextField = LimitTextField(frame: .zero, type: .account)
+        case .same:
+            holderTextField = LimitTextField(frame: .zero, type: .same)
+            productTextField = LimitTextField(frame: .zero, type: .same)
+        }
+        
         super.init(frame: frame)
+        
         setUI()
     }
     
@@ -42,6 +54,18 @@ final class ProductInputTextField: UIView {
 }
 
 extension ProductInputTextField {
+    
+    private func setTextFields() {
+        switch type {
+        case .deco:
+            holderTextField = LimitTextField(frame: .zero, type: .holder)
+            productTextField = LimitTextField(frame: .zero, type: .account)
+        case .same:
+            holderTextField = LimitTextField(frame: .zero, type: .same)
+            productTextField = LimitTextField(frame: .zero, type: .same)
+        }
+    }
+    
     private func setUI() {
         self.addSubview(chooseButton)
         self.addSubview(holderTextField)
@@ -51,7 +75,7 @@ extension ProductInputTextField {
             make.height.equalTo(100)
         }
         switch type {
-        case .newCreate:
+        case .same:
             chooseButton.snp.makeConstraints { make in
                 make.top.leading.equalToSuperview()
                 make.width.equalTo(90)
@@ -67,6 +91,7 @@ extension ProductInputTextField {
                 make.top.equalTo(chooseButton.snp.bottom).offset(35)
                 make.leading.trailing.equalToSuperview()
             }
+            
             
         case .deco:
             chooseButton.snp.makeConstraints { make in

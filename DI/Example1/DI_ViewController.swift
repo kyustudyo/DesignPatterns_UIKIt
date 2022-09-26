@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+
 import MyAppUIKit
 import API
 // API와 MyAppUIKit bridge
@@ -16,6 +17,7 @@ class DI_ViewController: UIViewController {
     
     override func viewDidLoad() {
 
+        view.backgroundColor = .white
         let button = UIButton()
         button.setTitle("버튼", for: .normal)
         view.addSubviews(button)
@@ -23,7 +25,7 @@ class DI_ViewController: UIViewController {
             make.top.equalTo(view.safeAreaLayoutGuide).offset(30)
             make.leading.trailing.equalToSuperview().inset(20)
         }
-        button.backgroundColor = .red
+        button.backgroundColor = .systemBlue
         button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
     }
 

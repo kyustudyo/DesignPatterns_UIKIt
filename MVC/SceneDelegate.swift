@@ -20,10 +20,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
         
+        let loginViewModel = LoginViewModel(service: WebserviceFactory().create())
+        
+        
 //        let viewController = ViewController()
-        let viewController = ProductViewController()
+//        let viewController = ProductViewController()
 //        let viewController = DI_ViewController()
-//        let  viewController = P_ViewController()
+        let viewController = LoginViewController(viewModel: loginViewModel)
 //        let viewController = ProductViewController()
 
         

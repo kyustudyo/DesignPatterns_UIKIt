@@ -15,14 +15,21 @@ final class ProductStackView: UIStackView {
         v.font = .systemFont(ofSize: 18, weight: .bold)
         return v
     }()
-    lazy var productInputField = ProductInputTextField(frame: .zero, type: .deco)
     
+    var type: ProductInputFieldType = .deco {
+        didSet {
+            setUI()
+        }
+    }
+    
+    lazy var productInputField = ProductInputTextField(frame: .zero, type: type)
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
-        setUI()
+//        setUI()
     }
-    
+
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -38,9 +45,9 @@ extension ProductStackView {
     
     private func setUI() {
         self.addArrangedSubviews(accountLabel, productInputField)
-
         productInputField.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()
         }
     }
 }
+

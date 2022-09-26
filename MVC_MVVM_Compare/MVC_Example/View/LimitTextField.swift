@@ -7,22 +7,21 @@
 
 import UIKit
 import SnapKit
+import SwiftUI
 
 public enum LimitTextFieldType {
-//    case nickName   // 닉네임을 입력해주세요, limit : 10
-    case holder     // 예금주명을 입력해주세요, limit : 20
-    case account    // 계좌번호를 입력해주세요
+
+    case holder
+    case account
     case check
-//    case roomCode  // 정산방 코드를 입력해주세요
-//    case roomName  // 정산방 이름을 입력하세요, limit : 12
-    
-//    case paymentTitle  // 정산하고자 하는 항목을 입력하세요, limit : 12
+    case same
 }
 
 final class LimitTextField: UIView {
     private var type: LimitTextFieldType
     lazy var textField: PaddedTextField = {
         let v = PaddedTextField()
+        
         v.clearButtonMode = .whileEditing
         v.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         return v
@@ -53,6 +52,8 @@ extension LimitTextField {
     private func configure() {
         var placeholder = ""
         switch type {
+        case .same:
+            placeholder = "같은 값을 입력해보세요!"
         case .holder:
             placeholder = "아이디 입력하세요"
             self.limit = 20

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7955C61428DD85E9007D62D1 /* P_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7955C61328DD85E9007D62D1 /* P_ViewController.swift */; };
 		7955C61928DD8BCC007D62D1 /* DI_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7955C61828DD8BCC007D62D1 /* DI_ViewController.swift */; };
 		7955C62028DD9351007D62D1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7955C61F28DD9351007D62D1 /* SnapKit */; };
 		798A67BF28D052140018F9B8 /* PhoneNumbers.json in Resources */ = {isa = PBXBuildFile; fileRef = 798A67BE28D052140018F9B8 /* PhoneNumbers.json */; };
@@ -22,8 +21,6 @@
 		79AC054428DD730000790053 /* API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79AC053C28DD730000790053 /* API.framework */; };
 		79AC054528DD730000790053 /* API.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 79AC053C28DD730000790053 /* API.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79AC054D28DD742900790053 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AC054C28DD742900790053 /* APICaller.swift */; };
-		79AC055B28DD757900790053 /* APIRealted.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79AC055328DD757900790053 /* APIRealted.framework */; };
-		79AC055C28DD757900790053 /* APIRealted.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 79AC055328DD757900790053 /* APIRealted.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79AC056B28DD765000790053 /* MyAppUIKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = 79AC056A28DD765000790053 /* MyAppUIKit.docc */; };
 		79AC056C28DD765000790053 /* MyAppUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 79AC056928DD765000790053 /* MyAppUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		79AC056F28DD765000790053 /* MyAppUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79AC056728DD765000790053 /* MyAppUIKit.framework */; };
@@ -55,6 +52,12 @@
 		79EDC47428BBACCC0061524A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EDC47328BBACCC0061524A /* DataManager.swift */; };
 		79EDC47628BBAD150061524A /* InfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EDC47528BBAD150061524A /* InfoModel.swift */; };
 		79EDC47828BBCC2C0061524A /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EDC47728BBCC2C0061524A /* ViewExtension.swift */; };
+		79EE1F7128E1770200EBC61A /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EE1F7028E1770200EBC61A /* Webservice.swift */; };
+		79EE1F7328E177B700EBC61A /* WebserviceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EE1F7228E177B700EBC61A /* WebserviceFactory.swift */; };
+		79EE1F7628E1781800EBC61A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EE1F7528E1781800EBC61A /* LoginViewModel.swift */; };
+		79EE1F7928E179C200EBC61A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EE1F7828E179C200EBC61A /* LoginViewController.swift */; };
+		79EE1F8528E1B7CB00EBC61A /* MVC_MVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EE1F8428E1B7CB00EBC61A /* MVC_MVVMUITests.swift */; };
+		79EE1F8728E1B7CB00EBC61A /* MVC_MVVMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EE1F8628E1B7CB00EBC61A /* MVC_MVVMUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,19 +68,19 @@
 			remoteGlobalIDString = 79AC053B28DD730000790053;
 			remoteInfo = API;
 		};
-		79AC055928DD757900790053 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 79EDC44F28BBAB6C0061524A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 79AC055228DD757900790053;
-			remoteInfo = APIRealted;
-		};
 		79AC056D28DD765000790053 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 79EDC44F28BBAB6C0061524A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 79AC056628DD765000790053;
 			remoteInfo = MyAppUIKit;
+		};
+		79EE1F8828E1B7CB00EBC61A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79EDC44F28BBAB6C0061524A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79EDC45628BBAB6C0061524A;
+			remoteInfo = MVC_MVVM;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -89,7 +92,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				79AC054528DD730000790053 /* API.framework in Embed Frameworks */,
-				79AC055C28DD757900790053 /* APIRealted.framework in Embed Frameworks */,
 				79AC057028DD765000790053 /* MyAppUIKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -98,7 +100,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7955C61328DD85E9007D62D1 /* P_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P_ViewController.swift; sourceTree = "<group>"; };
 		7955C61828DD8BCC007D62D1 /* DI_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DI_ViewController.swift; sourceTree = "<group>"; };
 		798A67BE28D052140018F9B8 /* PhoneNumbers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PhoneNumbers.json; sourceTree = "<group>"; };
 		798A67C028D054940018F9B8 /* Webservices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservices.swift; sourceTree = "<group>"; };
@@ -111,7 +112,6 @@
 		79AC053E28DD730000790053 /* API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
 		79AC053F28DD730000790053 /* API.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = API.docc; sourceTree = "<group>"; };
 		79AC054C28DD742900790053 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
-		79AC055328DD757900790053 /* APIRealted.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = APIRealted.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79AC056728DD765000790053 /* MyAppUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyAppUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79AC056928DD765000790053 /* MyAppUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyAppUIKit.h; sourceTree = "<group>"; };
 		79AC056A28DD765000790053 /* MyAppUIKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = MyAppUIKit.docc; sourceTree = "<group>"; };
@@ -143,17 +143,17 @@
 		79EDC47328BBACCC0061524A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		79EDC47528BBAD150061524A /* InfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModel.swift; sourceTree = "<group>"; };
 		79EDC47728BBCC2C0061524A /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		79EE1F7028E1770200EBC61A /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		79EE1F7228E177B700EBC61A /* WebserviceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebserviceFactory.swift; sourceTree = "<group>"; };
+		79EE1F7528E1781800EBC61A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		79EE1F7828E179C200EBC61A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		79EE1F8228E1B7CB00EBC61A /* MVC_MVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVC_MVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79EE1F8428E1B7CB00EBC61A /* MVC_MVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVC_MVVMUITests.swift; sourceTree = "<group>"; };
+		79EE1F8628E1B7CB00EBC61A /* MVC_MVVMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVC_MVVMUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		79AC053928DD730000790053 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		79AC055028DD757900790053 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -174,8 +174,14 @@
 			files = (
 				79B3E9EA28DB1D95007F0672 /* SnapKit in Frameworks */,
 				79AC056F28DD765000790053 /* MyAppUIKit.framework in Frameworks */,
-				79AC055B28DD757900790053 /* APIRealted.framework in Frameworks */,
 				79AC054428DD730000790053 /* API.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79EE1F7F28E1B7CB00EBC61A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				79B3E9FB28DC03FA007F0672 /* MVVM_ViewController_.swift */,
-				7955C61328DD85E9007D62D1 /* P_ViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -194,7 +199,8 @@
 		7955C61A28DD8BFB007D62D1 /* DI */ = {
 			isa = PBXGroup;
 			children = (
-				7955C61828DD8BCC007D62D1 /* DI_ViewController.swift */,
+				79EE1F6B28E176B600EBC61A /* Example2-with-UITest */,
+				79EE1F6A28E176AC00EBC61A /* Example1 */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -242,7 +248,7 @@
 			path = MyAppUIKit;
 			sourceTree = "<group>";
 		};
-		79B3E9D128DB17E7007F0672 /* MVVM_No_Combine&Rx */ = {
+		79B3E9D128DB17E7007F0672 /* MVVM_without_Combine&Rx */ = {
 			isa = PBXGroup;
 			children = (
 				79B3E9D928DB18C2007F0672 /* WebService */,
@@ -251,7 +257,7 @@
 				79B3E9D528DB1805007F0672 /* MVVM_ViewModel */,
 				79B3E9D428DB17FF007F0672 /* MVVM_ViewController */,
 			);
-			path = "MVVM_No_Combine&Rx";
+			path = "MVVM_without_Combine&Rx";
 			sourceTree = "<group>";
 		};
 		79B3E9D428DB17FF007F0672 /* MVVM_ViewController */ = {
@@ -323,10 +329,10 @@
 		79B3E9F828DC0399007F0672 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				79B3E9F628DBEB78007F0672 /* ProductStackView.swift */,
 				79B3E9F028DBE5C2007F0672 /* InputTextField.swift */,
 				79B3E9F228DBE662007F0672 /* LimitTextField.swift */,
 				79B3E9F428DBE68F007F0672 /* PaddedTextField.swift */,
-				79B3E9F628DBEB78007F0672 /* ProductStackView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -369,13 +375,12 @@
 		79EDC44E28BBAB6C0061524A = {
 			isa = PBXGroup;
 			children = (
+				79B3E9E528DB1C7E007F0672 /* Helper */,
 				7955C61A28DD8BFB007D62D1 /* DI */,
 				79B3E9EC28DBE50F007F0672 /* MVC_MVVM_Compare */,
-				79B3E9E528DB1C7E007F0672 /* Helper */,
-				79B3E9D128DB17E7007F0672 /* MVVM_No_Combine&Rx */,
-				79EDC45928BBAB6C0061524A /* MVC_MVVM */,
-				79AC056828DD765000790053 /* MyAppUIKit */,
-				79AC053D28DD730000790053 /* API */,
+				79B3E9D128DB17E7007F0672 /* MVVM_without_Combine&Rx */,
+				79EDC45928BBAB6C0061524A /* MVC */,
+				79EE1F8328E1B7CB00EBC61A /* MVC_MVVMUITests */,
 				79EDC45828BBAB6C0061524A /* Products */,
 				7955C61E28DD9351007D62D1 /* Frameworks */,
 			);
@@ -386,13 +391,13 @@
 			children = (
 				79EDC45728BBAB6C0061524A /* MVC_MVVM.app */,
 				79AC053C28DD730000790053 /* API.framework */,
-				79AC055328DD757900790053 /* APIRealted.framework */,
 				79AC056728DD765000790053 /* MyAppUIKit.framework */,
+				79EE1F8228E1B7CB00EBC61A /* MVC_MVVMUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		79EDC45928BBAB6C0061524A /* MVC_MVVM */ = {
+		79EDC45928BBAB6C0061524A /* MVC */ = {
 			isa = PBXGroup;
 			children = (
 				798A67BD28D052060018F9B8 /* Resources */,
@@ -406,7 +411,7 @@
 				79EDC46528BBAB6E0061524A /* LaunchScreen.storyboard */,
 				79EDC46828BBAB6E0061524A /* Info.plist */,
 			);
-			path = MVC_MVVM;
+			path = MVC;
 			sourceTree = "<group>";
 		};
 		79EDC47028BBACB00061524A /* Model */ = {
@@ -441,6 +446,68 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		79EE1F6A28E176AC00EBC61A /* Example1 */ = {
+			isa = PBXGroup;
+			children = (
+				7955C61828DD8BCC007D62D1 /* DI_ViewController.swift */,
+				79AC053D28DD730000790053 /* API */,
+				79AC056828DD765000790053 /* MyAppUIKit */,
+			);
+			path = Example1;
+			sourceTree = "<group>";
+		};
+		79EE1F6B28E176B600EBC61A /* Example2-with-UITest */ = {
+			isa = PBXGroup;
+			children = (
+				79EE1F7728E179AA00EBC61A /* ViewController */,
+				79EE1F6D28E176DF00EBC61A /* Services */,
+				79EE1F6C28E176DA00EBC61A /* Factories */,
+				79EE1F7428E1780600EBC61A /* ViewModels */,
+			);
+			path = "Example2-with-UITest";
+			sourceTree = "<group>";
+		};
+		79EE1F6C28E176DA00EBC61A /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				79EE1F7228E177B700EBC61A /* WebserviceFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		79EE1F6D28E176DF00EBC61A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				79EE1F7028E1770200EBC61A /* Webservice.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		79EE1F7428E1780600EBC61A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				79EE1F7528E1781800EBC61A /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		79EE1F7728E179AA00EBC61A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				79EE1F7828E179C200EBC61A /* LoginViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		79EE1F8328E1B7CB00EBC61A /* MVC_MVVMUITests */ = {
+			isa = PBXGroup;
+			children = (
+				79EE1F8428E1B7CB00EBC61A /* MVC_MVVMUITests.swift */,
+				79EE1F8628E1B7CB00EBC61A /* MVC_MVVMUITestsLaunchTests.swift */,
+			);
+			path = MVC_MVVMUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -449,13 +516,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				79AC054128DD730000790053 /* API.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		79AC054E28DD757900790053 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,24 +546,6 @@
 			name = API;
 			productName = API;
 			productReference = 79AC053C28DD730000790053 /* API.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		79AC055228DD757900790053 /* APIRealted */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 79AC055D28DD757900790053 /* Build configuration list for PBXNativeTarget "APIRealted" */;
-			buildPhases = (
-				79AC054E28DD757900790053 /* Headers */,
-				79AC054F28DD757900790053 /* Sources */,
-				79AC055028DD757900790053 /* Frameworks */,
-				79AC055128DD757900790053 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = APIRealted;
-			productName = APIRealted;
-			productReference = 79AC055328DD757900790053 /* APIRealted.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		79AC056628DD765000790053 /* MyAppUIKit */ = {
@@ -540,7 +582,6 @@
 			);
 			dependencies = (
 				79AC054328DD730000790053 /* PBXTargetDependency */,
-				79AC055A28DD757900790053 /* PBXTargetDependency */,
 				79AC056E28DD765000790053 /* PBXTargetDependency */,
 			);
 			name = MVC_MVVM;
@@ -550,6 +591,24 @@
 			productName = MVC_MVVM;
 			productReference = 79EDC45728BBAB6C0061524A /* MVC_MVVM.app */;
 			productType = "com.apple.product-type.application";
+		};
+		79EE1F8128E1B7CB00EBC61A /* MVC_MVVMUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79EE1F8A28E1B7CB00EBC61A /* Build configuration list for PBXNativeTarget "MVC_MVVMUITests" */;
+			buildPhases = (
+				79EE1F7E28E1B7CB00EBC61A /* Sources */,
+				79EE1F7F28E1B7CB00EBC61A /* Frameworks */,
+				79EE1F8028E1B7CB00EBC61A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79EE1F8928E1B7CB00EBC61A /* PBXTargetDependency */,
+			);
+			name = MVC_MVVMUITests;
+			productName = MVC_MVVMUITests;
+			productReference = 79EE1F8228E1B7CB00EBC61A /* MVC_MVVMUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -564,14 +623,15 @@
 					79AC053B28DD730000790053 = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
-					79AC055228DD757900790053 = {
-						CreatedOnToolsVersion = 13.3.1;
-					};
 					79AC056628DD765000790053 = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
 					79EDC45628BBAB6C0061524A = {
 						CreatedOnToolsVersion = 13.3.1;
+					};
+					79EE1F8128E1B7CB00EBC61A = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 79EDC45628BBAB6C0061524A;
 					};
 				};
 			};
@@ -593,21 +653,14 @@
 			targets = (
 				79EDC45628BBAB6C0061524A /* MVC_MVVM */,
 				79AC053B28DD730000790053 /* API */,
-				79AC055228DD757900790053 /* APIRealted */,
 				79AC056628DD765000790053 /* MyAppUIKit */,
+				79EE1F8128E1B7CB00EBC61A /* MVC_MVVMUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		79AC053A28DD730000790053 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		79AC055128DD757900790053 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -632,6 +685,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79EE1F8028E1B7CB00EBC61A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -641,13 +701,6 @@
 			files = (
 				79AC054028DD730000790053 /* API.docc in Sources */,
 				79AC054D28DD742900790053 /* APICaller.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		79AC054F28DD757900790053 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,15 +719,16 @@
 			files = (
 				79B3E9FF28DC0439007F0672 /* MVVM_ViewModel.swift in Sources */,
 				79EDC47428BBACCC0061524A /* DataManager.swift in Sources */,
+				79EE1F7628E1781800EBC61A /* LoginViewModel.swift in Sources */,
 				79B3E9DB28DB18D0007F0672 /* APIService.swift in Sources */,
 				79B3E9FC28DC03FA007F0672 /* MVVM_ViewController_.swift in Sources */,
 				798A67C728D09F0A0018F9B8 /* Event.swift in Sources */,
 				79B3E9E328DB1997007F0672 /* ProductTableViewCell.swift in Sources */,
 				79EDC45F28BBAB6C0061524A /* ViewController.swift in Sources */,
 				79EDC46F28BBAC600061524A /* OrderTableViewCell.swift in Sources */,
-				7955C61428DD85E9007D62D1 /* P_ViewController.swift in Sources */,
 				79EDC47628BBAD150061524A /* InfoModel.swift in Sources */,
 				79EDC45B28BBAB6C0061524A /* AppDelegate.swift in Sources */,
+				79EE1F7128E1770200EBC61A /* Webservice.swift in Sources */,
 				79B3E9EF28DBE527007F0672 /* MVC_ViewController.swift in Sources */,
 				79B3E9F328DBE662007F0672 /* LimitTextField.swift in Sources */,
 				798A67C328D054C90018F9B8 /* Network.swift in Sources */,
@@ -688,12 +742,23 @@
 				79B3E9D328DB17F9007F0672 /* MVVM_ViewController.swift in Sources */,
 				79B3E9F728DBEB78007F0672 /* ProductStackView.swift in Sources */,
 				79B3E9E728DB1C89007F0672 /* Extension.swift in Sources */,
+				79EE1F7328E177B700EBC61A /* WebserviceFactory.swift in Sources */,
 				79B3E9F528DBE68F007F0672 /* PaddedTextField.swift in Sources */,
 				7955C61928DD8BCC007D62D1 /* DI_ViewController.swift in Sources */,
 				79EDC47828BBCC2C0061524A /* ViewExtension.swift in Sources */,
+				79EE1F7928E179C200EBC61A /* LoginViewController.swift in Sources */,
 				798A67CB28D0A3180018F9B8 /* PhoneNumberTableViewCell.swift in Sources */,
 				79B3E9E128DB197A007F0672 /* ProductTableViewDataSource.swift in Sources */,
 				798A67C528D054D00018F9B8 /* NetworkError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79EE1F7E28E1B7CB00EBC61A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79EE1F8728E1B7CB00EBC61A /* MVC_MVVMUITestsLaunchTests.swift in Sources */,
+				79EE1F8528E1B7CB00EBC61A /* MVC_MVVMUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,15 +770,15 @@
 			target = 79AC053B28DD730000790053 /* API */;
 			targetProxy = 79AC054228DD730000790053 /* PBXContainerItemProxy */;
 		};
-		79AC055A28DD757900790053 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 79AC055228DD757900790053 /* APIRealted */;
-			targetProxy = 79AC055928DD757900790053 /* PBXContainerItemProxy */;
-		};
 		79AC056E28DD765000790053 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 79AC056628DD765000790053 /* MyAppUIKit */;
 			targetProxy = 79AC056D28DD765000790053 /* PBXContainerItemProxy */;
+		};
+		79EE1F8928E1B7CB00EBC61A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79EDC45628BBAB6C0061524A /* MVC_MVVM */;
+			targetProxy = 79EE1F8828E1B7CB00EBC61A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -787,66 +852,6 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kyuWorld.API;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		79AC055E28DD757900790053 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = H5PD3P95F5;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kyuWorld.APIRealted;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		79AC055F28DD757900790053 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = H5PD3P95F5;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kyuWorld.APIRealted;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1041,7 +1046,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H5PD3P95F5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MVC_MVVM/Info.plist;
+				INFOPLIST_FILE = MVC/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1070,7 +1075,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H5PD3P95F5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MVC_MVVM/Info.plist;
+				INFOPLIST_FILE = MVC/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1089,6 +1094,40 @@
 			};
 			name = Release;
 		};
+		79EE1F8B28E1B7CB00EBC61A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H5PD3P95F5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kyuWorld.MVC-MVVMUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MVC_MVVM;
+			};
+			name = Debug;
+		};
+		79EE1F8C28E1B7CB00EBC61A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H5PD3P95F5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kyuWorld.MVC-MVVMUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MVC_MVVM;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1097,15 +1136,6 @@
 			buildConfigurations = (
 				79AC054728DD730000790053 /* Debug */,
 				79AC054828DD730000790053 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		79AC055D28DD757900790053 /* Build configuration list for PBXNativeTarget "APIRealted" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				79AC055E28DD757900790053 /* Debug */,
-				79AC055F28DD757900790053 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1133,6 +1163,15 @@
 			buildConfigurations = (
 				79EDC46C28BBAB6E0061524A /* Debug */,
 				79EDC46D28BBAB6E0061524A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79EE1F8A28E1B7CB00EBC61A /* Build configuration list for PBXNativeTarget "MVC_MVVMUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79EE1F8B28E1B7CB00EBC61A /* Debug */,
+				79EE1F8C28E1B7CB00EBC61A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

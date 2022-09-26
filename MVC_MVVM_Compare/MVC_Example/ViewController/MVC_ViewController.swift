@@ -11,10 +11,15 @@ class MVC_ViewController: UIViewController {
     
     lazy var productStackView: ProductStackView = {
         let v = ProductStackView()
-        v.productInputField.productTextField.textField.delegate = self
-        v.productInputField.holderTextField.textField.delegate = self
-        v.productInputField.productTextField.textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-        v.productInputField.holderTextField.textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
+        let textField1 = v.productInputField.productTextField.textField
+        let textField2 = v.productInputField.holderTextField.textField
+        
+        textField1.delegate = self
+        textField2.delegate = self
+        textField1.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        textField2.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
         return v
     }()
     

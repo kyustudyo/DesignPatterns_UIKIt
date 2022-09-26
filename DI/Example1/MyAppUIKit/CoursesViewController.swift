@@ -39,7 +39,7 @@ public class CoursesViewController: UIViewController {
         
         view.backgroundColor = .systemBackground
         dataFetchable.fetchCourseNames { [weak self] names in
-            self?.courses = names.map { .init(name: $0)}
+            self?.courses = names.map { .init(name: $0) }
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
             }
@@ -48,6 +48,7 @@ public class CoursesViewController: UIViewController {
     
     var courses: [Course] = []
     
+    //MARK: Dependency Injection
     public init(dataFetchable: DataFetchable) {
         self.dataFetchable = dataFetchable
         super.init(nibName: nil, bundle: nil)
