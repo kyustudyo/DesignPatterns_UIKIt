@@ -22,3 +22,7 @@ extension UIView {
         }
     }
 }
+
+extension UIColor {
+    static var allColors: [UIColor] = [.red, .systemBackground, .blue, .label, .orange, .brown, .green]
+}

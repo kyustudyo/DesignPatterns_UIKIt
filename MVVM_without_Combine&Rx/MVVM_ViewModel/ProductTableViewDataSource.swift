@@ -32,4 +32,6 @@ class ProductTableViewDataSource<CELL : UITableViewCell,T> : NSObject, UITableVi
         self.configureCell(cell, item ?? nil)
         return cell
     }
+    
 }
+

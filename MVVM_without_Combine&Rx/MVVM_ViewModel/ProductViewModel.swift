@@ -23,9 +23,15 @@ class ProductViewModel {
         fetchProduct()
     }
 
-    func fetchProduct() {
+    private func fetchProduct() {
         self.apiService.fetchProducts { (empData) in
             self.product = empData// main thread 가 아님
         }
     }
+    
+    func didTapCell() {
+        fetchProduct()
+    }
+    
+
 }
