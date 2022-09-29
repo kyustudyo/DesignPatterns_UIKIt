@@ -7,11 +7,13 @@
 
 import Foundation
 import RxSwift
+import RxRelay
 
 class MenuViewModel {
     
     let disposeBag = DisposeBag()
-    let MenusSubject = BehaviorSubject<[MenuDomainModels.Menu]>(value: [])
+//    let MenusSubject = BehaviorSubject<[MenuDomainModels.Menu]>(value: [])
+    let MenusSubject = BehaviorRelay<[MenuDomainModels.Menu]>(value: [])
     let MenuAPIService: MenuRepository
     
     init() {
@@ -22,12 +24,13 @@ class MenuViewModel {
     private func fetchMenus() {
         MenuAPIService.fetchMenuAPI()
             .subscribe(onNext: { menus in
-                self.MenusSubject.onNext(menus)
+//                self.MenusSubject.onNext(menus)
+                self.MenusSubject.accept(menus)
             },
                        onError: { error in
                 print(error.localizedDescription)
             },
-                       onCompleted: { 
+                       onCompleted: {
                 print("complete")
             }
             )//observable은 .bind 불가
