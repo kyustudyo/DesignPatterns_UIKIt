@@ -16,6 +16,7 @@
 		798A67C728D09F0A0018F9B8 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A67C628D09F0A0018F9B8 /* Event.swift */; };
 		798A67C928D09F420018F9B8 /* PhoneNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A67C828D09F420018F9B8 /* PhoneNumbers.swift */; };
 		798A67CB28D0A3180018F9B8 /* PhoneNumberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A67CA28D0A3180018F9B8 /* PhoneNumberTableViewCell.swift */; };
+		79A9145728E5BD3500BE96BF /* WebserviceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A9145628E5BD3500BE96BF /* WebserviceFactory.swift */; };
 		79AC054028DD730000790053 /* API.docc in Sources */ = {isa = PBXBuildFile; fileRef = 79AC053F28DD730000790053 /* API.docc */; };
 		79AC054128DD730000790053 /* API.h in Headers */ = {isa = PBXBuildFile; fileRef = 79AC053E28DD730000790053 /* API.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		79AC054428DD730000790053 /* API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79AC053C28DD730000790053 /* API.framework */; };
@@ -53,7 +54,6 @@
 		79EDC47628BBAD150061524A /* InfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EDC47528BBAD150061524A /* InfoModel.swift */; };
 		79EDC47828BBCC2C0061524A /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EDC47728BBCC2C0061524A /* ViewExtension.swift */; };
 		79EE1F7128E1770200EBC61A /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EE1F7028E1770200EBC61A /* Webservice.swift */; };
-		79EE1F7328E177B700EBC61A /* WebserviceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EE1F7228E177B700EBC61A /* WebserviceFactory.swift */; };
 		79EE1F7628E1781800EBC61A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EE1F7528E1781800EBC61A /* LoginViewModel.swift */; };
 		79EE1F7928E179C200EBC61A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EE1F7828E179C200EBC61A /* LoginViewController.swift */; };
 		79EE1F8528E1B7CB00EBC61A /* MVC_MVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EE1F8428E1B7CB00EBC61A /* MVC_MVVMUITests.swift */; };
@@ -108,6 +108,7 @@
 		798A67C628D09F0A0018F9B8 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		798A67C828D09F420018F9B8 /* PhoneNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumbers.swift; sourceTree = "<group>"; };
 		798A67CA28D0A3180018F9B8 /* PhoneNumberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTableViewCell.swift; sourceTree = "<group>"; };
+		79A9145628E5BD3500BE96BF /* WebserviceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebserviceFactory.swift; sourceTree = "<group>"; };
 		79AC053C28DD730000790053 /* API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79AC053E28DD730000790053 /* API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
 		79AC053F28DD730000790053 /* API.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = API.docc; sourceTree = "<group>"; };
@@ -144,7 +145,6 @@
 		79EDC47528BBAD150061524A /* InfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModel.swift; sourceTree = "<group>"; };
 		79EDC47728BBCC2C0061524A /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		79EE1F7028E1770200EBC61A /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
-		79EE1F7228E177B700EBC61A /* WebserviceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebserviceFactory.swift; sourceTree = "<group>"; };
 		79EE1F7528E1781800EBC61A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		79EE1F7828E179C200EBC61A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		79EE1F8228E1B7CB00EBC61A /* MVC_MVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVC_MVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,6 +226,14 @@
 				79EDC47728BBCC2C0061524A /* ViewExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		79A9145528E5BD2700BE96BF /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				79A9145628E5BD3500BE96BF /* WebserviceFactory.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		79AC053D28DD730000790053 /* API */ = {
@@ -459,20 +467,12 @@
 		79EE1F6B28E176B600EBC61A /* Example2-with-UITest */ = {
 			isa = PBXGroup;
 			children = (
+				79A9145528E5BD2700BE96BF /* Factories */,
 				79EE1F7728E179AA00EBC61A /* ViewController */,
 				79EE1F6D28E176DF00EBC61A /* Services */,
-				79EE1F6C28E176DA00EBC61A /* Factories */,
 				79EE1F7428E1780600EBC61A /* ViewModels */,
 			);
 			path = "Example2-with-UITest";
-			sourceTree = "<group>";
-		};
-		79EE1F6C28E176DA00EBC61A /* Factories */ = {
-			isa = PBXGroup;
-			children = (
-				79EE1F7228E177B700EBC61A /* WebserviceFactory.swift */,
-			);
-			path = Factories;
 			sourceTree = "<group>";
 		};
 		79EE1F6D28E176DF00EBC61A /* Services */ = {
@@ -719,6 +719,7 @@
 			files = (
 				79B3E9FF28DC0439007F0672 /* MVVM_ViewModel.swift in Sources */,
 				79EDC47428BBACCC0061524A /* DataManager.swift in Sources */,
+				79A9145728E5BD3500BE96BF /* WebserviceFactory.swift in Sources */,
 				79EE1F7628E1781800EBC61A /* LoginViewModel.swift in Sources */,
 				79B3E9DB28DB18D0007F0672 /* APIService.swift in Sources */,
 				79B3E9FC28DC03FA007F0672 /* MVVM_ViewController_.swift in Sources */,
@@ -742,7 +743,6 @@
 				79B3E9D328DB17F9007F0672 /* MVVM_ViewController.swift in Sources */,
 				79B3E9F728DBEB78007F0672 /* ProductStackView.swift in Sources */,
 				79B3E9E728DB1C89007F0672 /* Extension.swift in Sources */,
-				79EE1F7328E177B700EBC61A /* WebserviceFactory.swift in Sources */,
 				79B3E9F528DBE68F007F0672 /* PaddedTextField.swift in Sources */,
 				7955C61928DD8BCC007D62D1 /* DI_ViewController.swift in Sources */,
 				79EDC47828BBCC2C0061524A /* ViewExtension.swift in Sources */,
