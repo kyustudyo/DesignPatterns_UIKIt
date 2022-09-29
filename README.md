@@ -1,12 +1,11 @@
-# MVC, MVVM 두가지 디자인패턴 관련 다수 프로젝트 파일 ✏️
-1. Combine, SnapKit
+# MVC, MVVM, Repository 패턴 파일 ✏️
+
+0. SnapKit
+1. Combine, Rx 
 2. DI
 
 MVC에서 KVO, NotificationCenter 같은 Observer Pattern을 사용했습니다. Delegate Pattern 또는 클로저를 이용한 completionHandler로 Model의 변화를 전달할 예정입니다.
 todo: https://github.com/BestKora/Combine-MVVM-UIKit
-
-
-
 # 
 # 소프트웨어의 개발 방법, software development pattern - MVC to MVVM
 ## MVC
