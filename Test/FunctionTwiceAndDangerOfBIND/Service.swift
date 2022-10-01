@@ -3,7 +3,6 @@
 //  RxSwift+MVVM
 //
 //  Created by Hankyu Lee on 2022/09/30.
-//  Copyright © 2022 iamchiwon. All rights reserved.
 //
 
 import Foundation
