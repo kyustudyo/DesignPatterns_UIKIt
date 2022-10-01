@@ -10,6 +10,7 @@ import Foundation
 class ProductViewModel {
     
     private var apiService : APIService!
+    //이런식으로하면 rx가 필요없겠다.
     private(set) var product : Product! {
         didSet {
             self.bindEmployeeViewModelToController()
@@ -33,5 +34,17 @@ class ProductViewModel {
         fetchProduct()
     }
     
+    
+    //MARK: RxSwift를 사용하지 않을때 생기는 callback 지옥
+    func fetchProductAnd(completion: @escaping () -> () ) {
+        self.apiService.fetchProducts { product in
+            self.apiService.convertImage(product: product) { isMaxProduct in
+                if isMaxProduct {
+                    completion()
+                }
+            }
+        }
+    }
+
 
 }

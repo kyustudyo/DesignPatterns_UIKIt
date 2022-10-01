@@ -14,7 +14,7 @@ import Foundation
 class DataManager {
     
     static let shared = DataManager()
-    
+    public init() { }
     //MARK: delegate를 통한 데이터 전달 가능
 //    weak var delegate: fetchDelegate?
     

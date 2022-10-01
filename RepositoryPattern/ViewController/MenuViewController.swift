@@ -33,27 +33,32 @@ class MenuViewController: UIViewController {
         setUI()
         view.backgroundColor = .white
         
-        
-        viewModel.MenusSubject
-//            .catchAndReturn([])
-//            .observe(on: MainScheduler.instance)
-            .asDriver(onErrorJustReturn: [])
-            .drive(tableView.rx.items(cellIdentifier: MenuTableViewCell.cellId, cellType: MenuTableViewCell.self)) { index, item, cell in
-                cell.nameLabel.text = item.name
-                cell.priceLabel.text = "\(item.price)"
-            }
+        Service.getImageURLString(urlString: "ee")
+            .subscribe(onNext: {
+                print($0! + "sdsd")
+            })
             .disposed(by: disposeBag)
-//            .bind(to: tableView.rx.items(cellIdentifier: MenuTableViewCell.cellId, cellType: MenuTableViewCell.self)) { index, item, cell in
+        
+//        viewModel.MenusSubject
+////            .catchAndReturn([])
+////            .observe(on: MainScheduler.instance)
+//            .asDriver(onErrorJustReturn: [])
+//            .drive(tableView.rx.items(cellIdentifier: MenuTableViewCell.cellId, cellType: MenuTableViewCell.self)) { index, item, cell in
 //                cell.nameLabel.text = item.name
 //                cell.priceLabel.text = "\(item.price)"
 //            }
-        
-        tableView.rx.itemSelected
-            .map{ "\($0)"}
-            .asDriver(onErrorJustReturn: "")
-            .drive(tappedCellIndexLabel.rx.text)
-            .disposed(by: disposeBag)
-            
+//            .disposed(by: disposeBag)
+////            .bind(to: tableView.rx.items(cellIdentifier: MenuTableViewCell.cellId, cellType: MenuTableViewCell.self)) { index, item, cell in
+////                cell.nameLabel.text = item.name
+////                cell.priceLabel.text = "\(item.price)"
+////            }
+//        
+//        tableView.rx.itemSelected
+//            .map{ "\($0)"}
+//            .asDriver(onErrorJustReturn: "")
+//            .drive(tappedCellIndexLabel.rx.text)
+//            .disposed(by: disposeBag)
+//            
     }
     
     private func setUI() {

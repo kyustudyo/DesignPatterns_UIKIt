@@ -40,9 +40,12 @@ public class ProductViewController: UIViewController {
     func callToViewModelForUIUpdate(){
         
         self.productViewModel =  ProductViewModel()
+        
+        //RX를 사용하지 않을때 바인딩.
         self.productViewModel.bindEmployeeViewModelToController = {
             self.updateDataSource()
         }
+        
     }
     
     func updateDataSource(){
@@ -53,6 +56,7 @@ public class ProductViewController: UIViewController {
             cell.productNameLabel.text = "cell 클릭시 api 호출 합니다.\n 색깔의 변화는 완료를 의미합니다."
             cell.backgroundColor = UIColor.allColors.randomElement()
         })
+        
         DispatchQueue.main.async {
             self.productTableView.dataSource = self.dataSource
             self.productTableView.reloadData()

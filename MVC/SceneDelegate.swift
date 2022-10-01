@@ -27,9 +27,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let viewController = ProductViewController()
 //        let viewController = DI_ViewController()
 //        let viewController = LoginViewController(viewModel: loginViewModel)
-        let viewController = MenuViewController()
+//        let viewController = MenuViewController()
 //        let viewController = ProductViewController()
-
+//        let viewController = ViewController_RxFunction()
+//        let viewController = MasterViewController()
+        let viewController = ViewController_RxFunction()
         
         switch viewController {
             case let viewController as ViewController:

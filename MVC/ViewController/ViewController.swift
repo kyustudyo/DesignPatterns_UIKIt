@@ -70,6 +70,7 @@ class ViewController: UIViewController {
             print($0)
         })
     }
+    
     //MARK: User Interact -> Model Update -> View Update
     private func fetchData() {
         dataManager.fetchData { model in
