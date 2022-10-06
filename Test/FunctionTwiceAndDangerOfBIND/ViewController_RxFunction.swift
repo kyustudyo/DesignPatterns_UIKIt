@@ -29,6 +29,9 @@ class ViewController_RxFunction: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
+        
+        self.viewModel.delegate = self
+        
         setUI()
         
         viewModel.urlStringObservable
@@ -42,8 +45,10 @@ class ViewController_RxFunction: UIViewController {
         
         button.rx.tap
             .subscribe(onNext: { _ in
-                let vc = RxFunctionNextViewController(viewModel: self.viewModel)
-                self.present(vc, animated: true)
+//                let vc = RxFunctionNextViewController(viewModel: self.viewModel)
+//                self.present(vc, animated: true)
+//                self.viewModel.callFristAsynchronose()
+                self.viewModel.asynchronoseWithDelegateInViewController()
             })
             .disposed(by: disposeBag)
             
@@ -64,9 +69,9 @@ class ViewController_RxFunction: UIViewController {
 //            })
         
         
-        Service.getImageURLString(urlString: "www.geturl.com")
+        Service().getImageURLString(urlString: "www.geturl.com")
             .flatMap { s in
-                return Service.getImageURLString(urlString: s!)
+                return Service().getImageURLString(urlString: s!)
             }
             .subscribe(onNext: {
                 print("stream을 전달 받아서 stream전달 한 후 subscribe" + $0!)
@@ -97,5 +102,14 @@ extension ViewController_RxFunction {
         } else {
             return Observable.just(UIImage())
         }
+    }
+}
+
+extension ViewController_RxFunction: CompleteDelegate {
+    func complete(data: String) {
+        DispatchQueue.main.async {
+            self.label.text = data
+        }
+        
     }
 }

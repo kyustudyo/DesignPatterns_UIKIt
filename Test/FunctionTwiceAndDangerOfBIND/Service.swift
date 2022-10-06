@@ -9,9 +9,14 @@ import Foundation
 import RxSwift
 import UIKit
 
+//MARK: delegate pattern
+protocol Complete: AnyObject {
+    func isComplete()
+}
+
 class Service {
-    
-    static func getImageURLString(urlString: String) -> Observable<String?> {
+    weak var delegate: Complete?
+    func getImageURLString(urlString: String) -> Observable<String?> {
         return Observable.create { emitter in
             DispatchQueue.global().asyncAfter(deadline: .now() + 3){
                     emitter.onNext("hihi")
@@ -32,4 +37,26 @@ class Service {
 //            return Disposables.create()
 //        }
 //    }
+}
+
+extension Service {
+    
+    func firstAsynchronoseWithCompletion(completion: @escaping (String) -> Void) {
+        DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
+            completion("1차완료")
+        }
+    }
+    
+    func firstAsynchronose() {
+        DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
+            self.delegate?.isComplete()
+        }
+    }
+    
+    func firstAsynchronoseWithCompletion_ViewModel_delegate(completion: @escaping (String) -> Void) {
+        DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
+            completion("완료했습니다. firstAsynchronoseWithCompletion")
+        }
+    }
+    
 }

@@ -33,7 +33,7 @@ class MenuViewController: UIViewController {
         setUI()
         view.backgroundColor = .white
         
-        Service.getImageURLString(urlString: "ee")
+        Service().getImageURLString(urlString: "ee")
             .subscribe(onNext: {
                 print($0! + "sdsd")
             })

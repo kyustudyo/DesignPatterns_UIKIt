@@ -50,7 +50,8 @@ class RxFunctionNextViewController: UIViewController {
         
         button.rx.tap
             .subscribe(onNext: {
-            self.viewModel.changeString()
+//            self.viewModel.changeString()
+                self.viewModel.asynchronoseWithDelegateInViewController()
         })
         .disposed(by: disposeBag)
         
@@ -71,4 +72,5 @@ class RxFunctionNextViewController: UIViewController {
         
     }
 }
+
 
