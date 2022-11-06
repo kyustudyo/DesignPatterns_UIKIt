@@ -11,7 +11,30 @@
 		7918C27528F0448600617EEA /* ViewController_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918C27428F0448600617EEA /* ViewController_Button.swift */; };
 		7955C61928DD8BCC007D62D1 /* DI_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7955C61828DD8BCC007D62D1 /* DI_ViewController.swift */; };
 		7955C62028DD9351007D62D1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7955C61F28DD9351007D62D1 /* SnapKit */; };
-		79566FB82917D29E00E37125 /* Search in Resources */ = {isa = PBXBuildFile; fileRef = 79566FB72917D29E00E37125 /* Search */; };
+		79566FBF2917E5AC00E37125 /* CourseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79566FBC2917E5AC00E37125 /* CourseTableView.swift */; };
+		79566FC02917E5AC00E37125 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79566FBD2917E5AC00E37125 /* CourseTableViewCell.swift */; };
+		79566FC12917E5AC00E37125 /* PlanetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79566FBE2917E5AC00E37125 /* PlanetTableViewCell.swift */; };
+		79566FC62917E5BC00E37125 /* FollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79566FC22917E5BC00E37125 /* FollowButton.swift */; };
+		79566FC72917E5BC00E37125 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79566FC32917E5BC00E37125 /* SearchTextField.swift */; };
+		79566FC82917E5BC00E37125 /* CoursePlanetSegmentedControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79566FC42917E5BC00E37125 /* CoursePlanetSegmentedControlView.swift */; };
+		79566FC92917E5BC00E37125 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79566FC52917E5BC00E37125 /* LikeButton.swift */; };
+		79566FCD2917E5D000E37125 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79566FCA2917E5D000E37125 /* SearchCoordinator.swift */; };
+		79566FCE2917E5D000E37125 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79566FCB2917E5D000E37125 /* SearchViewModel.swift */; };
+		79566FCF2917E5D000E37125 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79566FCC2917E5D000E37125 /* SearchViewController.swift */; };
+		79566FD52917E60500E37125 /* CourseImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79566FD42917E60500E37125 /* CourseImageCollectionViewCell.swift */; };
+		79566FDC2917E62200E37125 /* CourseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79566FDB2917E62200E37125 /* CourseInterface.swift */; };
+		79566FDE2917E62600E37125 /* CourseLikeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79566FDD2917E62600E37125 /* CourseLikeUseCase.swift */; };
+		79566FE02917E62B00E37125 /* CourseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79566FDF2917E62B00E37125 /* CourseModel.swift */; };
+		79566FE62917E65100E37125 /* SearchPlanetUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79566FE42917E65100E37125 /* SearchPlanetUseCase.swift */; };
+		79566FE72917E65100E37125 /* PlanetFollowUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79566FE52917E65100E37125 /* PlanetFollowUseCase.swift */; };
+		79566FE92917E65500E37125 /* PlanetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79566FE82917E65500E37125 /* PlanetRepository.swift */; };
+		79566FEB2917E65A00E37125 /* PlanetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79566FEA2917E65A00E37125 /* PlanetModel.swift */; };
+		79566FF02917E67600E37125 /* CourseLikeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79566FEE2917E67600E37125 /* CourseLikeRepository.swift */; };
+		79566FF12917E67600E37125 /* CourseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79566FEF2917E67600E37125 /* CourseDTO.swift */; };
+		79566FF62917E67B00E37125 /* PlanetFollowRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79566FF22917E67B00E37125 /* PlanetFollowRepository.swift */; };
+		79566FF72917E67B00E37125 /* PlanetDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79566FF32917E67B00E37125 /* PlanetDTO.swift */; };
+		79566FF82917E67B00E37125 /* SearchPlanetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79566FF42917E67B00E37125 /* SearchPlanetRepository.swift */; };
+		79566FF92917E67B00E37125 /* SearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79566FF52917E67B00E37125 /* SearchAPI.swift */; };
 		798A67BF28D052140018F9B8 /* PhoneNumbers.json in Resources */ = {isa = PBXBuildFile; fileRef = 798A67BE28D052140018F9B8 /* PhoneNumbers.json */; };
 		798A67C128D054940018F9B8 /* Webservices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A67C028D054940018F9B8 /* Webservices.swift */; };
 		798A67C328D054C90018F9B8 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A67C228D054C90018F9B8 /* Network.swift */; };
@@ -123,7 +146,30 @@
 		7918C27128F0305100617EEA /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		7918C27428F0448600617EEA /* ViewController_Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Button.swift; sourceTree = "<group>"; };
 		7955C61828DD8BCC007D62D1 /* DI_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DI_ViewController.swift; sourceTree = "<group>"; };
-		79566FB72917D29E00E37125 /* Search */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Search; path = "../../job/MacC-Team-Trying-iOS/Sources/Presenter/Search"; sourceTree = "<group>"; };
+		79566FBC2917E5AC00E37125 /* CourseTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTableView.swift; sourceTree = "<group>"; };
+		79566FBD2917E5AC00E37125 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
+		79566FBE2917E5AC00E37125 /* PlanetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetTableViewCell.swift; sourceTree = "<group>"; };
+		79566FC22917E5BC00E37125 /* FollowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowButton.swift; sourceTree = "<group>"; };
+		79566FC32917E5BC00E37125 /* SearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		79566FC42917E5BC00E37125 /* CoursePlanetSegmentedControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursePlanetSegmentedControlView.swift; sourceTree = "<group>"; };
+		79566FC52917E5BC00E37125 /* LikeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
+		79566FCA2917E5D000E37125 /* SearchCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
+		79566FCB2917E5D000E37125 /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		79566FCC2917E5D000E37125 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		79566FD42917E60500E37125 /* CourseImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		79566FDB2917E62200E37125 /* CourseInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseInterface.swift; sourceTree = "<group>"; };
+		79566FDD2917E62600E37125 /* CourseLikeUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseLikeUseCase.swift; sourceTree = "<group>"; };
+		79566FDF2917E62B00E37125 /* CourseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseModel.swift; sourceTree = "<group>"; };
+		79566FE42917E65100E37125 /* SearchPlanetUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPlanetUseCase.swift; sourceTree = "<group>"; };
+		79566FE52917E65100E37125 /* PlanetFollowUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetFollowUseCase.swift; sourceTree = "<group>"; };
+		79566FE82917E65500E37125 /* PlanetRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetRepository.swift; sourceTree = "<group>"; };
+		79566FEA2917E65A00E37125 /* PlanetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetModel.swift; sourceTree = "<group>"; };
+		79566FEE2917E67600E37125 /* CourseLikeRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseLikeRepository.swift; sourceTree = "<group>"; };
+		79566FEF2917E67600E37125 /* CourseDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDTO.swift; sourceTree = "<group>"; };
+		79566FF22917E67B00E37125 /* PlanetFollowRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetFollowRepository.swift; sourceTree = "<group>"; };
+		79566FF32917E67B00E37125 /* PlanetDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetDTO.swift; sourceTree = "<group>"; };
+		79566FF42917E67B00E37125 /* SearchPlanetRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPlanetRepository.swift; sourceTree = "<group>"; };
+		79566FF52917E67B00E37125 /* SearchAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAPI.swift; sourceTree = "<group>"; };
 		798A67BE28D052140018F9B8 /* PhoneNumbers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PhoneNumbers.json; sourceTree = "<group>"; };
 		798A67C028D054940018F9B8 /* Webservices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservices.swift; sourceTree = "<group>"; };
 		798A67C228D054C90018F9B8 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -271,9 +317,152 @@
 		79566FB62917D28100E37125 /* Test2 */ = {
 			isa = PBXGroup;
 			children = (
-				79566FB72917D29E00E37125 /* Search */,
+				79566FD32917E5FC00E37125 /* PhotoImage */,
+				79566FD22917E5F800E37125 /* Domain */,
+				79566FD12917E5F500E37125 /* Data */,
+				79566FD02917E5EA00E37125 /* Course */,
+				79566FCA2917E5D000E37125 /* SearchCoordinator.swift */,
+				79566FCC2917E5D000E37125 /* SearchViewController.swift */,
+				79566FCB2917E5D000E37125 /* SearchViewModel.swift */,
 			);
 			path = Test2;
+			sourceTree = "<group>";
+		};
+		79566FBB2917E5A000E37125 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				79566FC42917E5BC00E37125 /* CoursePlanetSegmentedControlView.swift */,
+				79566FC22917E5BC00E37125 /* FollowButton.swift */,
+				79566FC52917E5BC00E37125 /* LikeButton.swift */,
+				79566FC32917E5BC00E37125 /* SearchTextField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		79566FD02917E5EA00E37125 /* Course */ = {
+			isa = PBXGroup;
+			children = (
+				79566FBB2917E5A000E37125 /* Components */,
+				79566FBC2917E5AC00E37125 /* CourseTableView.swift */,
+				79566FBD2917E5AC00E37125 /* CourseTableViewCell.swift */,
+				79566FBE2917E5AC00E37125 /* PlanetTableViewCell.swift */,
+			);
+			path = Course;
+			sourceTree = "<group>";
+		};
+		79566FD12917E5F500E37125 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				79566FED2917E66D00E37125 /* Planet */,
+				79566FEC2917E66400E37125 /* Course */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		79566FD22917E5F800E37125 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				79566FD72917E60C00E37125 /* Planet */,
+				79566FD62917E60A00E37125 /* Course */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		79566FD32917E5FC00E37125 /* PhotoImage */ = {
+			isa = PBXGroup;
+			children = (
+				79566FD42917E60500E37125 /* CourseImageCollectionViewCell.swift */,
+			);
+			path = PhotoImage;
+			sourceTree = "<group>";
+		};
+		79566FD62917E60A00E37125 /* Course */ = {
+			isa = PBXGroup;
+			children = (
+				79566FDA2917E61900E37125 /* Usecase */,
+				79566FD92917E61600E37125 /* Interface */,
+				79566FD82917E61200E37125 /* Entity */,
+			);
+			path = Course;
+			sourceTree = "<group>";
+		};
+		79566FD72917E60C00E37125 /* Planet */ = {
+			isa = PBXGroup;
+			children = (
+				79566FE32917E64800E37125 /* Usecase */,
+				79566FE22917E64500E37125 /* Interface */,
+				79566FE12917E64100E37125 /* Entity */,
+			);
+			path = Planet;
+			sourceTree = "<group>";
+		};
+		79566FD82917E61200E37125 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				79566FDF2917E62B00E37125 /* CourseModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		79566FD92917E61600E37125 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				79566FDB2917E62200E37125 /* CourseInterface.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		79566FDA2917E61900E37125 /* Usecase */ = {
+			isa = PBXGroup;
+			children = (
+				79566FDD2917E62600E37125 /* CourseLikeUseCase.swift */,
+			);
+			path = Usecase;
+			sourceTree = "<group>";
+		};
+		79566FE12917E64100E37125 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				79566FEA2917E65A00E37125 /* PlanetModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		79566FE22917E64500E37125 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				79566FE82917E65500E37125 /* PlanetRepository.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		79566FE32917E64800E37125 /* Usecase */ = {
+			isa = PBXGroup;
+			children = (
+				79566FE52917E65100E37125 /* PlanetFollowUseCase.swift */,
+				79566FE42917E65100E37125 /* SearchPlanetUseCase.swift */,
+			);
+			path = Usecase;
+			sourceTree = "<group>";
+		};
+		79566FEC2917E66400E37125 /* Course */ = {
+			isa = PBXGroup;
+			children = (
+				79566FEF2917E67600E37125 /* CourseDTO.swift */,
+				79566FEE2917E67600E37125 /* CourseLikeRepository.swift */,
+			);
+			path = Course;
+			sourceTree = "<group>";
+		};
+		79566FED2917E66D00E37125 /* Planet */ = {
+			isa = PBXGroup;
+			children = (
+				79566FF32917E67B00E37125 /* PlanetDTO.swift */,
+				79566FF22917E67B00E37125 /* PlanetFollowRepository.swift */,
+				79566FF52917E67B00E37125 /* SearchAPI.swift */,
+				79566FF42917E67B00E37125 /* SearchPlanetRepository.swift */,
+			);
+			path = Planet;
 			sourceTree = "<group>";
 		};
 		798A67BD28D052060018F9B8 /* Resources */ = {
@@ -877,7 +1066,6 @@
 			files = (
 				79A9149528E817E000BE96BF /* readme.rtf in Resources */,
 				798A67BF28D052140018F9B8 /* PhoneNumbers.json in Resources */,
-				79566FB82917D29E00E37125 /* Search in Resources */,
 				79EDC46728BBAB6E0061524A /* LaunchScreen.storyboard in Resources */,
 				79EDC46428BBAB6E0061524A /* Assets.xcassets in Resources */,
 				79EDC46228BBAB6C0061524A /* Main.storyboard in Resources */,
@@ -918,30 +1106,46 @@
 			files = (
 				79B3E9FF28DC0439007F0672 /* MVVM_ViewModel.swift in Sources */,
 				79A9148D28E7EF5C00BE96BF /* RxFunctionViewModel.swift in Sources */,
+				79566FF02917E67600E37125 /* CourseLikeRepository.swift in Sources */,
 				79EDC47428BBACCC0061524A /* DataManager.swift in Sources */,
+				79566FC92917E5BC00E37125 /* LikeButton.swift in Sources */,
 				79A9147A28E5CF0800BE96BF /* MenuTableViewCell.swift in Sources */,
+				79566FF12917E67600E37125 /* CourseDTO.swift in Sources */,
 				79A9145728E5BD3500BE96BF /* WebserviceFactory.swift in Sources */,
 				79EE1F7628E1781800EBC61A /* LoginViewModel.swift in Sources */,
 				79B3E9DB28DB18D0007F0672 /* APIService.swift in Sources */,
 				79B3E9FC28DC03FA007F0672 /* MVVM_ViewController_.swift in Sources */,
 				798A67C728D09F0A0018F9B8 /* Event.swift in Sources */,
+				79566FE92917E65500E37125 /* PlanetRepository.swift in Sources */,
+				79566FDC2917E62200E37125 /* CourseInterface.swift in Sources */,
 				79B3E9E328DB1997007F0672 /* ProductTableViewCell.swift in Sources */,
 				79EDC45F28BBAB6C0061524A /* ViewController.swift in Sources */,
 				79EDC46F28BBAC600061524A /* OrderTableViewCell.swift in Sources */,
 				79EDC47628BBAD150061524A /* InfoModel.swift in Sources */,
 				79A9148928E711AD00BE96BF /* Service.swift in Sources */,
+				79566FC02917E5AC00E37125 /* CourseTableViewCell.swift in Sources */,
 				79EDC45B28BBAB6C0061524A /* AppDelegate.swift in Sources */,
 				79EE1F7128E1770200EBC61A /* Webservice.swift in Sources */,
+				79566FBF2917E5AC00E37125 /* CourseTableView.swift in Sources */,
 				79B3E9EF28DBE527007F0672 /* MVC_ViewController.swift in Sources */,
+				79566FCD2917E5D000E37125 /* SearchCoordinator.swift in Sources */,
 				79B3E9F328DBE662007F0672 /* LimitTextField.swift in Sources */,
+				79566FF92917E67B00E37125 /* SearchAPI.swift in Sources */,
+				79566FF82917E67B00E37125 /* SearchPlanetRepository.swift in Sources */,
 				798A67C328D054C90018F9B8 /* Network.swift in Sources */,
 				798A67C928D09F420018F9B8 /* PhoneNumbers.swift in Sources */,
 				79A9148B28E7EEF200BE96BF /* RxFunctionNextViewController.swift in Sources */,
+				79566FF72917E67B00E37125 /* PlanetDTO.swift in Sources */,
+				79566FF62917E67B00E37125 /* PlanetFollowRepository.swift in Sources */,
 				79B3E9DD28DB1907007F0672 /* Product.swift in Sources */,
+				79566FD52917E60500E37125 /* CourseImageCollectionViewCell.swift in Sources */,
+				79566FC62917E5BC00E37125 /* FollowButton.swift in Sources */,
 				79B3EA0228DC4EC9007F0672 /* UIControl_UITextField.swift in Sources */,
+				79566FCF2917E5D000E37125 /* SearchViewController.swift in Sources */,
 				79EDC45D28BBAB6C0061524A /* SceneDelegate.swift in Sources */,
 				79E283B7290389D1008CAE90 /* OpenAndClose.swift in Sources */,
 				79B3E9DF28DB193A007F0672 /* ProductViewModel.swift in Sources */,
+				79566FEB2917E65A00E37125 /* PlanetModel.swift in Sources */,
 				79B3E9F128DBE5C2007F0672 /* InputTextField.swift in Sources */,
 				798A67C128D054940018F9B8 /* Webservices.swift in Sources */,
 				79B3E9D328DB17F9007F0672 /* MVVM_ViewController.swift in Sources */,
@@ -951,16 +1155,24 @@
 				7955C61928DD8BCC007D62D1 /* DI_ViewController.swift in Sources */,
 				79A9146B28E5BFA300BE96BF /* MenuRepository.swift in Sources */,
 				79EDC47828BBCC2C0061524A /* ViewExtension.swift in Sources */,
+				79566FE62917E65100E37125 /* SearchPlanetUseCase.swift in Sources */,
 				79EE1F7928E179C200EBC61A /* LoginViewController.swift in Sources */,
 				79A9147628E5CC5400BE96BF /* MenuViewController.swift in Sources */,
+				79566FCE2917E5D000E37125 /* SearchViewModel.swift in Sources */,
+				79566FE02917E62B00E37125 /* CourseModel.swift in Sources */,
+				79566FC82917E5BC00E37125 /* CoursePlanetSegmentedControlView.swift in Sources */,
 				798A67CB28D0A3180018F9B8 /* PhoneNumberTableViewCell.swift in Sources */,
+				79566FC72917E5BC00E37125 /* SearchTextField.swift in Sources */,
 				79B3E9E128DB197A007F0672 /* ProductTableViewDataSource.swift in Sources */,
+				79566FE72917E65100E37125 /* PlanetFollowUseCase.swift in Sources */,
+				79566FDE2917E62600E37125 /* CourseLikeUseCase.swift in Sources */,
 				7918C27528F0448600617EEA /* ViewController_Button.swift in Sources */,
 				79A9146728E5BF2700BE96BF /* API.swift in Sources */,
 				7918C27228F0305100617EEA /* CustomLabel.swift in Sources */,
 				79A9148728E7119E00BE96BF /* ViewController_RxFunction.swift in Sources */,
 				798A67C528D054D00018F9B8 /* NetworkError.swift in Sources */,
 				79A9147228E5C14500BE96BF /* MenuError.swift in Sources */,
+				79566FC12917E5AC00E37125 /* PlanetTableViewCell.swift in Sources */,
 				79A9147428E5C87500BE96BF /* MenuViewModel.swift in Sources */,
 				79A9146F28E5C00E00BE96BF /* MenuDomainModels.swift in Sources */,
 				79A9146928E5BF5F00BE96BF /* DTO.swift in Sources */,
