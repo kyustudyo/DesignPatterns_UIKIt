@@ -43,6 +43,7 @@ class ProductTableViewCell: UITableViewCell {
     
     private func setUI() {
         
+        
         addSubviews(productLabel, productNameLabel)
         productLabel.snp.makeConstraints { make in
             make.centerY.equalToSuperview()

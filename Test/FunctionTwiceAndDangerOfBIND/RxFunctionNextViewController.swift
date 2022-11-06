@@ -19,7 +19,7 @@ class RxFunctionNextViewController: UIViewController {
         $0.setTitle("String 수정", for: .normal)
         return $0
     }(UIButton())
-    
+    let a = UIView()
     private var label: UILabel = {
         $0.font = .systemFont(ofSize: 14, weight: .bold)
         return $0
@@ -55,6 +55,8 @@ class RxFunctionNextViewController: UIViewController {
         })
         .disposed(by: disposeBag)
         
+        
+        
     }
     
     
@@ -71,6 +73,7 @@ class RxFunctionNextViewController: UIViewController {
         }
         
     }
+    
 }
 
 

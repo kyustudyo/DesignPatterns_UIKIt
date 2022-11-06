@@ -41,5 +41,9 @@ class OrderTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    override class func awakeFromNib() {
+        
+    }
 
 }

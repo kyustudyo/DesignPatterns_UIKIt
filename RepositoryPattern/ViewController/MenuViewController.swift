@@ -39,15 +39,15 @@ class MenuViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
-//        viewModel.MenusSubject
-////            .catchAndReturn([])
-////            .observe(on: MainScheduler.instance)
-//            .asDriver(onErrorJustReturn: [])
-//            .drive(tableView.rx.items(cellIdentifier: MenuTableViewCell.cellId, cellType: MenuTableViewCell.self)) { index, item, cell in
-//                cell.nameLabel.text = item.name
-//                cell.priceLabel.text = "\(item.price)"
-//            }
-//            .disposed(by: disposeBag)
+        viewModel.MenusSubject
+//            .catchAndReturn([])
+//            .observe(on: MainScheduler.instance)
+            .asDriver(onErrorJustReturn: [])
+            .drive(tableView.rx.items(cellIdentifier: MenuTableViewCell.cellId, cellType: MenuTableViewCell.self)) { index, item, cell in
+                cell.nameLabel.text = item.name
+                cell.priceLabel.text = "\(item.price)"
+            }
+            .disposed(by: disposeBag)
 ////            .bind(to: tableView.rx.items(cellIdentifier: MenuTableViewCell.cellId, cellType: MenuTableViewCell.self)) { index, item, cell in
 ////                cell.nameLabel.text = item.name
 ////                cell.priceLabel.text = "\(item.price)"
@@ -73,5 +73,6 @@ class MenuViewController: UIViewController {
             make.top.equalTo(tappedCellIndexLabel.snp.bottom)
         }
     }
-    
+   
 }
+

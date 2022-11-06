@@ -26,6 +26,9 @@ class Service {
         }
     }
     
+    func k() {
+        getImageURLString(urlString: "")
+    }
 //    static func downLoadImage(urlString: String) -> Observable<String> {
 //        return Observable.create { emitter in
 ////            DispatchQueue.global().asyncAfter(deadline: .now()+1) {
@@ -58,5 +61,20 @@ extension Service {
             completion("완료했습니다. firstAsynchronoseWithCompletion")
         }
     }
+    
+    func makeJustOne() -> Observable<Int> {
+//        return Observable.just(3)//type method
+        return Observable.of(1,3,5,8,90)
+    }
+    
+    func returnSingle() -> Single<Int> {
+        Single.create { emitter in
+            emitter(.success(5))
+            return Disposables.create()
+        }
+    }
+//    func makeObsevableWithMake() -> Observable<Int> {
+//        
+//    }
     
 }
